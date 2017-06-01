@@ -13,6 +13,16 @@
 		96895E4A1EDE5A9E001EF130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96895E481EDE5A9E001EF130 /* Main.storyboard */; };
 		96895E4C1EDE5A9E001EF130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96895E4B1EDE5A9E001EF130 /* Assets.xcassets */; };
 		96895E4F1EDE5A9E001EF130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96895E4D1EDE5A9E001EF130 /* LaunchScreen.storyboard */; };
+		96895E6C1EDE60DA001EF130 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E6B1EDE60DA001EF130 /* RootTabBarController.m */; };
+		96895E701EDE63C9001EF130 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E6F1EDE63C9001EF130 /* RootViewController.m */; };
+		96895E741EDE67F5001EF130 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E731EDE67F5001EF130 /* HomeViewController.m */; };
+		96895E771EDE6810001EF130 /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E761EDE6810001EF130 /* ShoppingViewController.m */; };
+		96895E7A1EDE682B001EF130 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E791EDE682B001EF130 /* CommunityViewController.m */; };
+		96895E801EDE68D1001EF130 /* RootNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E7F1EDE68D1001EF130 /* RootNavController.m */; };
+		96895E831EDE699F001EF130 /* TabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E821EDE699F001EF130 /* TabBarView.m */; };
+		96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E851EDE6A5C001EF130 /* TabBarBtn.m */; };
+		96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E881EDE6C2E001EF130 /* MineViewController.m */; };
+		9693797C1EDE74E90057AA43 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9693797B1EDE74E90057AA43 /* Tool.m */; };
 		B8175BE8DC17CE9FE97C415D /* libPods-YouQu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 980EC4FB8D230211AEE16846 /* libPods-YouQu.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +39,27 @@
 		96895E4B1EDE5A9E001EF130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		96895E4E1EDE5A9E001EF130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96895E501EDE5A9E001EF130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		96895E6A1EDE60DA001EF130 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		96895E6B1EDE60DA001EF130 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		96895E6D1EDE617F001EF130 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		96895E6E1EDE63C9001EF130 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		96895E6F1EDE63C9001EF130 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		96895E721EDE67F5001EF130 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		96895E731EDE67F5001EF130 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		96895E751EDE6810001EF130 /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
+		96895E761EDE6810001EF130 /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
+		96895E781EDE682B001EF130 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
+		96895E791EDE682B001EF130 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
+		96895E7E1EDE68D1001EF130 /* RootNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavController.h; sourceTree = "<group>"; };
+		96895E7F1EDE68D1001EF130 /* RootNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavController.m; sourceTree = "<group>"; };
+		96895E811EDE699F001EF130 /* TabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarView.h; sourceTree = "<group>"; };
+		96895E821EDE699F001EF130 /* TabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarView.m; sourceTree = "<group>"; };
+		96895E841EDE6A5C001EF130 /* TabBarBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarBtn.h; sourceTree = "<group>"; };
+		96895E851EDE6A5C001EF130 /* TabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarBtn.m; sourceTree = "<group>"; };
+		96895E871EDE6C2E001EF130 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		96895E881EDE6C2E001EF130 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		9693797A1EDE74E90057AA43 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
+		9693797B1EDE74E90057AA43 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		980EC4FB8D230211AEE16846 /* libPods-YouQu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouQu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +111,8 @@
 				96895E5E1EDE5B49001EF130 /* Mine */,
 				96895E621EDE5B49001EF130 /* Other */,
 				96895E671EDE5B49001EF130 /* ThirdSDK */,
+				96895E711EDE6455001EF130 /* CustomClass */,
+				96895E691EDE6095001EF130 /* RootController */,
 				96895E681EDE5B49001EF130 /* Tool */,
 				96895E3F1EDE5A9D001EF130 /* Supporting Files */,
 			);
@@ -107,6 +140,8 @@
 		96895E571EDE5B49001EF130 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				96895E781EDE682B001EF130 /* CommunityViewController.h */,
+				96895E791EDE682B001EF130 /* CommunityViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,6 +173,8 @@
 		96895E5B1EDE5B49001EF130 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				96895E721EDE67F5001EF130 /* HomeViewController.h */,
+				96895E731EDE67F5001EF130 /* HomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +206,8 @@
 		96895E5F1EDE5B49001EF130 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				96895E871EDE6C2E001EF130 /* MineViewController.h */,
+				96895E881EDE6C2E001EF130 /* MineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +237,7 @@
 				96895E4B1EDE5A9E001EF130 /* Assets.xcassets */,
 				96895E4D1EDE5A9E001EF130 /* LaunchScreen.storyboard */,
 				96895E501EDE5A9E001EF130 /* Info.plist */,
+				96895E6D1EDE617F001EF130 /* PrefixHeader.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -215,6 +255,8 @@
 		96895E641EDE5B49001EF130 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				96895E751EDE6810001EF130 /* ShoppingViewController.h */,
+				96895E761EDE6810001EF130 /* ShoppingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,8 +285,34 @@
 		96895E681EDE5B49001EF130 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				9693797A1EDE74E90057AA43 /* Tool.h */,
+				9693797B1EDE74E90057AA43 /* Tool.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		96895E691EDE6095001EF130 /* RootController */ = {
+			isa = PBXGroup;
+			children = (
+				96895E6A1EDE60DA001EF130 /* RootTabBarController.h */,
+				96895E6B1EDE60DA001EF130 /* RootTabBarController.m */,
+				96895E6E1EDE63C9001EF130 /* RootViewController.h */,
+				96895E6F1EDE63C9001EF130 /* RootViewController.m */,
+				96895E7E1EDE68D1001EF130 /* RootNavController.h */,
+				96895E7F1EDE68D1001EF130 /* RootNavController.m */,
+			);
+			path = RootController;
+			sourceTree = "<group>";
+		};
+		96895E711EDE6455001EF130 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				96895E811EDE699F001EF130 /* TabBarView.h */,
+				96895E821EDE699F001EF130 /* TabBarView.m */,
+				96895E841EDE6A5C001EF130 /* TabBarBtn.h */,
+				96895E851EDE6A5C001EF130 /* TabBarBtn.m */,
+			);
+			path = CustomClass;
 			sourceTree = "<group>";
 		};
 		E8816307B990D04BAAECE99B /* Frameworks */ = {
@@ -378,9 +446,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9693797C1EDE74E90057AA43 /* Tool.m in Sources */,
+				96895E7A1EDE682B001EF130 /* CommunityViewController.m in Sources */,
 				96895E471EDE5A9D001EF130 /* ViewController.m in Sources */,
+				96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */,
+				96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */,
+				96895E6C1EDE60DA001EF130 /* RootTabBarController.m in Sources */,
 				96895E441EDE5A9D001EF130 /* AppDelegate.m in Sources */,
 				96895E411EDE5A9D001EF130 /* main.m in Sources */,
+				96895E701EDE63C9001EF130 /* RootViewController.m in Sources */,
+				96895E741EDE67F5001EF130 /* HomeViewController.m in Sources */,
+				96895E831EDE699F001EF130 /* TabBarView.m in Sources */,
+				96895E771EDE6810001EF130 /* ShoppingViewController.m in Sources */,
+				96895E801EDE68D1001EF130 /* RootNavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R5QQ22NM5N;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YouQu/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = YouQu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiamenglei.YouQu;
@@ -516,6 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R5QQ22NM5N;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YouQu/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = YouQu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiamenglei.YouQu;
