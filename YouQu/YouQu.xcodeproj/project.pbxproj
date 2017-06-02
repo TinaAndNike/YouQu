@@ -23,6 +23,9 @@
 		96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E851EDE6A5C001EF130 /* TabBarBtn.m */; };
 		96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E881EDE6C2E001EF130 /* MineViewController.m */; };
 		9693797C1EDE74E90057AA43 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9693797B1EDE74E90057AA43 /* Tool.m */; };
+		96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE21EDFEF170086D941 /* BannerCell.m */; };
+		96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE51EDFEF440086D941 /* ClassifyCell.m */; };
+		96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DEB1EE025750086D941 /* TimeLimitCell.m */; };
 		B8175BE8DC17CE9FE97C415D /* libPods-YouQu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 980EC4FB8D230211AEE16846 /* libPods-YouQu.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,12 @@
 		96895E881EDE6C2E001EF130 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		9693797A1EDE74E90057AA43 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		9693797B1EDE74E90057AA43 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		96DE8DE11EDFEF170086D941 /* BannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
+		96DE8DE21EDFEF170086D941 /* BannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerCell.m; sourceTree = "<group>"; };
+		96DE8DE41EDFEF440086D941 /* ClassifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyCell.h; sourceTree = "<group>"; };
+		96DE8DE51EDFEF440086D941 /* ClassifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyCell.m; sourceTree = "<group>"; };
+		96DE8DEA1EE025750086D941 /* TimeLimitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLimitCell.h; sourceTree = "<group>"; };
+		96DE8DEB1EE025750086D941 /* TimeLimitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLimitCell.m; sourceTree = "<group>"; };
 		980EC4FB8D230211AEE16846 /* libPods-YouQu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouQu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -189,6 +198,12 @@
 		96895E5D1EDE5B49001EF130 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96DE8DE11EDFEF170086D941 /* BannerCell.h */,
+				96DE8DE21EDFEF170086D941 /* BannerCell.m */,
+				96DE8DE41EDFEF440086D941 /* ClassifyCell.h */,
+				96DE8DE51EDFEF440086D941 /* ClassifyCell.m */,
+				96DE8DEA1EE025750086D941 /* TimeLimitCell.h */,
+				96DE8DEB1EE025750086D941 /* TimeLimitCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,11 +462,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9693797C1EDE74E90057AA43 /* Tool.m in Sources */,
+				96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */,
+				96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */,
 				96895E7A1EDE682B001EF130 /* CommunityViewController.m in Sources */,
 				96895E471EDE5A9D001EF130 /* ViewController.m in Sources */,
 				96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */,
 				96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */,
 				96895E6C1EDE60DA001EF130 /* RootTabBarController.m in Sources */,
+				96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */,
 				96895E441EDE5A9D001EF130 /* AppDelegate.m in Sources */,
 				96895E411EDE5A9D001EF130 /* main.m in Sources */,
 				96895E701EDE63C9001EF130 /* RootViewController.m in Sources */,

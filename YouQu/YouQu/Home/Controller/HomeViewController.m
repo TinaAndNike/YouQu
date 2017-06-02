@@ -7,6 +7,10 @@
 //
 
 #import "HomeViewController.h"
+#import "BannerCell.h"
+#import "ClassifyCell.h"
+#import "TimeLimitCell.h"
+
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -17,16 +21,13 @@
 
 @property (nonatomic, strong)UIImageView * homeNavImageView;
 
-@property (nonatomic, strong)UIImageView * leftBtnImageView;
+@property (nonatomic, strong)UIButton * leftBtn;
 
-@property (nonatomic, strong)UIImageView * rightBtnImageView;
+@property (nonatomic, strong)UIButton * rightBtn;
 
 @property (nonatomic, strong)UIBarButtonItem * rightItem;
 
 @property (nonatomic, assign)BOOL isAlpah;
-
-//scrollView
-@property (nonatomic, strong)UIScrollView * headScrollView;
 
 @end
 
@@ -37,7 +38,6 @@
     //self.title = @"首页";
     //建造tableView
     [self buildeTableView];
-    [self buildeScrollView];
     //透明nav
     [self lucencyNavigation];
 }
@@ -68,22 +68,18 @@
     _homeNavImageView.userInteractionEnabled = YES;
     [_transImageView addSubview:_homeNavImageView];
     
-    _leftBtnImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 28, 28)];
-    _leftBtnImageView.image = [UIImage imageNamed:@"nav_left_image"];
-    _leftBtnImageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer * navImageTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(navImageTapClick:)];
-    [_leftBtnImageView addGestureRecognizer:navImageTap];
-    [_transImageView addSubview:_leftBtnImageView];
+    _leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 28, 28)];
+    [_leftBtn setBackgroundImage:[UIImage imageNamed:@"nav_left_image"] forState:UIControlStateNormal];
+    _leftBtn.highlighted = NO;
+    [_leftBtn addTarget:self action:@selector(navBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_transImageView addSubview:_leftBtn];
     
-    _rightBtnImageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 48, 20, 28, 28)];
-    _rightBtnImageView.image = [UIImage imageNamed:@"nav_right_image"];
-    [_rightBtnImageView addGestureRecognizer:navImageTap];
-    [_transImageView addSubview:_rightBtnImageView];
+    _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 48, 20, 28, 28)];
+    [_rightBtn setBackgroundImage:[UIImage imageNamed:@"nav_right_image"] forState:UIControlStateNormal];
+    _rightBtn.highlighted = NO;
+    [_rightBtn addTarget:self action:@selector(navBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_transImageView addSubview:_rightBtn];
     
-    UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 20, 20)];
-    btn.backgroundColor = [UIColor cyanColor];
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [_transImageView addSubview:btn];
 }
 
 - (void)btnClick:(UIButton *)btn {
@@ -91,9 +87,9 @@
     NSLog(@"我标题点击了");
 }
 
-- (void)navImageTapClick:(UITapGestureRecognizer *)tap {
+- (void)navBtnClick:(UIButton *)btn {
 
-    if (tap.view == _leftBtnImageView) {
+    if (btn == _leftBtn) {
         
         NSLog(@"我是右边的");
         
@@ -108,51 +104,76 @@
 
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_HEIGHT + 20) style:UITableViewStylePlain];
     _tableView.backgroundColor = [UIColor grayColor];
+    _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    _tableView.rowHeight = 50;
-    //偏移180像素
-    _tableView.contentInset = UIEdgeInsetsMake(180, 0, 0, 0);
+    //bannerCell
+    [_tableView registerClass:[BannerCell class] forCellReuseIdentifier:@"bannerCell"];
+    //classifyCll
+    [_tableView registerClass:[ClassifyCell class] forCellReuseIdentifier:@"classifyCell"];
+    //timeLimit
+    [_tableView registerClass:[TimeLimitCell class] forCellReuseIdentifier:@"timeLimitCell"];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:_tableView];
 }
 
-#pragma mark - 建造ScrollView
-- (void)buildeScrollView {
-
-    _headScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, -180, SCREEN_WIDTH, 180)];
-    _headScrollView.showsHorizontalScrollIndicator = NO;
-    _headScrollView.pagingEnabled = YES;
-    _headScrollView.backgroundColor = [UIColor orangeColor];
-    [_tableView addSubview:_headScrollView];
-    
-}
 #define mark - tableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     return 20;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+#pragma mark - Cell的高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Tina";
-    return cell;
+    if (indexPath.row == 0) {
+        
+        return 180;
+    } else if (indexPath.row == 1) {
+    
+        return 150 * SPHEIGHT;
+    } else if (indexPath.row == 2){
+    
+        return 35;
+    } else {
+    
+        return 50;
+    }
+}
+
+#pragma mark - Cell复用的方法
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row == 0) {
+        
+        BannerCell * bannerCell = [tableView dequeueReusableCellWithIdentifier:@"bannerCell" forIndexPath:indexPath];
+        [bannerCell buildeBannerScrollViewWithHigh:180 andImageArr:nil];
+        return bannerCell;
+    } else if (indexPath.row == 1) {
+    
+        ClassifyCell * classifyCell = [tableView dequeueReusableCellWithIdentifier:@"classifyCell" forIndexPath:indexPath];
+        classifyCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [classifyCell createClassifyBtn];
+        return classifyCell;
+       
+    } else if (indexPath.row == 2) {
+    
+        TimeLimitCell * timeLimitCell = [tableView dequeueReusableCellWithIdentifier:@"timeLimitCell" forIndexPath:indexPath];
+        [timeLimitCell createTimeLimit];
+        return timeLimitCell;
+    } else {
+    
+        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        cell.textLabel.text = @"Tina";
+        return cell;
+    }
 }
 
 //调用tableView的滑动方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-    //if (scrollView == _tableView) {
-        
-        CGFloat minAlpah = -64;
-        CGFloat maxAlpah = 20;
-        CGFloat scrollViewY = scrollView.contentOffset.y;
-        CGFloat imageViewAlpah = (scrollViewY - minAlpah) / (maxAlpah - minAlpah);
-        _homeNavImageView.alpha = scrollView.contentOffset.y / 200;
-        
-        NSLog(@"------%lf-----%lf------%lf",scrollView.contentOffset.y,imageViewAlpah,_headScrollView.frame.origin.y);
-    //}
+    _homeNavImageView.alpha = scrollView.contentOffset.y / 200;
+    //NSLog(@"------%lf-----%lf",scrollView.contentOffset.y,imageViewAlpah);
 }
 
 @end

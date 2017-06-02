@@ -16,4 +16,6 @@
 
 + (UIView *)giveMeALineWithColor:(UIColor *)color;
 
++ (UILabel *)giveMeALabelWithRect:(CGRect)rect text:(NSString *)text textColor:(UIColor *)textColor backgroudColor:(UIColor *)bgColor fontSize:(CGFloat)fontSize weight:(CGFloat)weigt;
+
 @end

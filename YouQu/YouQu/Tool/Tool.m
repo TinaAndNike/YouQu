@@ -29,4 +29,14 @@
     return lineView;
 }
 
++ (UILabel *)giveMeALabelWithRect:(CGRect)rect text:(NSString *)text textColor:(UIColor *)textColor backgroudColor:(UIColor *)bgColor fontSize:(CGFloat)fontSize weight:(CGFloat)weigt {
+
+    UILabel * label = [[UILabel alloc] initWithFrame:rect];
+    label.text = text;
+    label.textColor = textColor;
+    label.backgroundColor = bgColor;
+    label.font = [UIFont systemFontOfSize:fontSize weight:weigt];
+    return label;
+}
+
 @end
