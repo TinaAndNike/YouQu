@@ -7,6 +7,13 @@
 //
 
 #import "BannerCell.h"
+#import "XMLBannerScrollView.h"
+
+@interface BannerCell()<CCCycleScrollViewClickActionDeleage>
+
+@property (nonatomic, strong)XMLBannerScrollView * bannerScrollView;
+
+@end
 
 @implementation BannerCell
 
@@ -34,11 +41,17 @@
 //建造banner
 - (void)buildeBannerScrollViewWithHigh:(CGFloat)high andImageArr:(NSArray *)imageArr {
 
-    UIScrollView * bannerScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, high)];
-    bannerScrollView.showsHorizontalScrollIndicator = NO;
-    bannerScrollView.pagingEnabled = YES;
-    bannerScrollView.backgroundColor = [UIColor orangeColor];
-    [self.contentView addSubview:bannerScrollView];
+    self.bannerScrollView = [[XMLBannerScrollView alloc] initWithImages:imageArr withFrame:CGRectMake(0, 0, SCREEN_WIDTH, high)];
+    NSLog(@"----%ld",imageArr.count);
+    self.bannerScrollView.delegate = self;
+    self.bannerScrollView.backgroundColor = [UIColor orangeColor];
+    [self.contentView addSubview:self.bannerScrollView];
+}
+
+#pragma bannerDelegate
+- (void)cyclePageClickAction:(NSInteger)clickIndex {
+
+    NSLog(@"第%ld张图片被点击了",clickIndex);
 }
 
 @end

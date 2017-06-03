@@ -18,6 +18,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = RANDOM_COLOR;
     self.title = @"购物车";
+    
+    NSLog(@"------%d",1%5);
 }
 
 - (void)didReceiveMemoryWarning {

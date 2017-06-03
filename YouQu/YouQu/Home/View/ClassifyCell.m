@@ -25,17 +25,7 @@
 - (void)createClassifyBtn {
     
     //删除复用图层
-    for (UIView * view in self.contentView.subviews) {
-        
-        if ([view isKindOfClass:[UIButton class]]) {
-            
-            [view removeFromSuperview];
-        }
-        if ([view isKindOfClass:[UILabel class]]) {
-            
-            [view removeFromSuperview];
-        }
-    }
+    [Tool solveReuseCellWithView:self.contentView];
     //建造按钮
     NSArray * labelTextName = @[@"套套天堂",@"情趣服饰",@"男用玩具",@"女用玩具",@"男女喷剂",@"润滑助剂",@"调教玩具",@"免费试用",@"撸一撸",@"分类"];
     NSArray * buttonImageName = @[@"home_fenlei__01",@"home_fenlei__02",@"home_fenlei__03",@"home_fenlei__04",@"home_fenlei__05",@"home_fenlei__06",@"home_fenlei__07",@"home_fenlei__08",@"home_fenlei__09",@"home_fenlei__10"];

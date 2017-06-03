@@ -10,6 +10,8 @@
 #import "BannerCell.h"
 #import "ClassifyCell.h"
 #import "TimeLimitCell.h"
+#import "LimitCommodityCell.h"
+#import "HotHeadCell.h"
 
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -29,6 +31,9 @@
 
 @property (nonatomic, assign)BOOL isAlpah;
 
+//bannerArray
+@property (nonatomic, strong)NSMutableArray * hardImageArray;
+
 @end
 
 @implementation HomeViewController
@@ -40,6 +45,24 @@
     [self buildeTableView];
     //透明nav
     [self lucencyNavigation];
+}
+
+#pragma mark - 懒加载
+- (NSMutableArray *)hardImageArray {
+
+    if (_hardImageArray == nil) {
+        
+        _hardImageArray = [[NSMutableArray alloc] init];
+        for (int i = 1; i < 6; i ++) {
+            
+            UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"banner_0%d",i]];
+            NSString * str = [NSString stringWithFormat:@"banner_0%d",i];
+            NSLog(@"----%@",str);
+            [_hardImageArray addObject:image];
+            NSLog(@"----%ld",_hardImageArray.count);
+        }
+    }
+    return _hardImageArray;
 }
 
 #pragma mark - 隐藏Nav和页面将要出现和消失
@@ -113,6 +136,10 @@
     [_tableView registerClass:[ClassifyCell class] forCellReuseIdentifier:@"classifyCell"];
     //timeLimit
     [_tableView registerClass:[TimeLimitCell class] forCellReuseIdentifier:@"timeLimitCell"];
+    //limitCommodity
+    [_tableView registerClass:[LimitCommodityCell class] forCellReuseIdentifier:@"commodityCell"];
+    //hotHeadCell
+    [_tableView registerClass:[HotHeadCell class] forCellReuseIdentifier:@"hotHeadCell"];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:_tableView];
 }
@@ -128,13 +155,19 @@
 
     if (indexPath.row == 0) {
         
-        return 180;
+        return 180 * SPHEIGHT;
     } else if (indexPath.row == 1) {
     
         return 150 * SPHEIGHT;
     } else if (indexPath.row == 2){
     
         return 35;
+    } else if (indexPath.row == 3){
+    
+        return 135 * SPHEIGHT;
+    } else if (indexPath.row == 4) {
+    
+        return 37 * SPHEIGHT;
     } else {
     
         return 50;
@@ -147,7 +180,7 @@
     if (indexPath.row == 0) {
         
         BannerCell * bannerCell = [tableView dequeueReusableCellWithIdentifier:@"bannerCell" forIndexPath:indexPath];
-        [bannerCell buildeBannerScrollViewWithHigh:180 andImageArr:nil];
+        [bannerCell buildeBannerScrollViewWithHigh:180 * SPHEIGHT andImageArr:self.hardImageArray];
         return bannerCell;
     } else if (indexPath.row == 1) {
     
@@ -161,6 +194,16 @@
         TimeLimitCell * timeLimitCell = [tableView dequeueReusableCellWithIdentifier:@"timeLimitCell" forIndexPath:indexPath];
         [timeLimitCell createTimeLimit];
         return timeLimitCell;
+    } else if (indexPath.row == 3){
+    
+        LimitCommodityCell * commodityCell = [tableView dequeueReusableCellWithIdentifier:@"commodityCell" forIndexPath:indexPath];
+        return commodityCell;
+    } else if (indexPath.row == 4){
+    
+        HotHeadCell * hotHeadCell = [tableView dequeueReusableCellWithIdentifier:@"hotHeadCell" forIndexPath:indexPath];
+        [hotHeadCell initHotHeadImageView:[UIImage imageNamed:@"home_remen"]];
+        return hotHeadCell;
+       
     } else {
     
         UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];

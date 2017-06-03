@@ -34,9 +34,63 @@
     UILabel * label = [[UILabel alloc] initWithFrame:rect];
     label.text = text;
     label.textColor = textColor;
-    label.backgroundColor = bgColor;
-    label.font = [UIFont systemFontOfSize:fontSize weight:weigt];
+    if (bgColor == nil) {
+        
+        label.backgroundColor = [UIColor clearColor];
+    } else {
+    
+         label.backgroundColor = bgColor;
+    }
+    if (weigt == 0) {
+        
+        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT];
+    } else {
+    
+        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT weight:weigt];
+    }
+    
     return label;
 }
+
++ (UIButton *)giveMeAButtonWithRect:(CGRect)rect title:(NSString *)title titleColor:(UIColor *)titleColor barkgroudColor:(UIColor *)bgColor barkgroudImage:(UIImage *)image fontOfSize:(CGFloat) fontSize{
+
+    UIButton * btn = [[UIButton alloc] initWithFrame:rect];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:titleColor forState:UIControlStateNormal];
+    if (bgColor != nil) {
+        
+        [btn setBackgroundColor:bgColor];
+    }
+    if (image != nil) {
+        
+        [btn setBackgroundImage:image forState:UIControlStateNormal];
+    }
+    if (fontSize != 0) {
+        
+        btn.titleLabel.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT];
+    }
+    
+    return btn;
+}
+
++ (void)solveReuseCellWithView:(UIView *)superView {
+
+    for (UIView * view in superView.subviews) {
+        
+        if ([view isKindOfClass:[UIView class]]) {
+            
+            [view removeFromSuperview];
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
 
 @end
