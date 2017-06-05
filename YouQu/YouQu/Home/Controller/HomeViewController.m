@@ -12,6 +12,7 @@
 #import "TimeLimitCell.h"
 #import "LimitCommodityCell.h"
 #import "HotHeadCell.h"
+#import "PublicCell.h"
 
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -140,6 +141,8 @@
     [_tableView registerClass:[LimitCommodityCell class] forCellReuseIdentifier:@"commodityCell"];
     //hotHeadCell
     [_tableView registerClass:[HotHeadCell class] forCellReuseIdentifier:@"hotHeadCell"];
+    //publicCell
+    [_tableView registerClass:[PublicCell class] forCellReuseIdentifier:@"publicCell"];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:_tableView];
 }
@@ -167,7 +170,10 @@
         return 135 * SPHEIGHT;
     } else if (indexPath.row == 4) {
     
-        return 37 * SPHEIGHT;
+        return 199 * SPHEIGHT;
+    } else if (indexPath.row == 5) {
+    
+        return 445 * SPHEIGHT;
     } else {
     
         return 50;
@@ -194,16 +200,26 @@
         TimeLimitCell * timeLimitCell = [tableView dequeueReusableCellWithIdentifier:@"timeLimitCell" forIndexPath:indexPath];
         [timeLimitCell createTimeLimit];
         return timeLimitCell;
+        
     } else if (indexPath.row == 3){
     
         LimitCommodityCell * commodityCell = [tableView dequeueReusableCellWithIdentifier:@"commodityCell" forIndexPath:indexPath];
         return commodityCell;
+        
     } else if (indexPath.row == 4){
     
         HotHeadCell * hotHeadCell = [tableView dequeueReusableCellWithIdentifier:@"hotHeadCell" forIndexPath:indexPath];
-        [hotHeadCell initHotHeadImageView:[UIImage imageNamed:@"home_remen"]];
+        
         return hotHeadCell;
        
+    } else if (indexPath.row == 5) {
+    
+        PublicCell * publicCell = [tableView dequeueReusableCellWithIdentifier:@"publicCell" forIndexPath:indexPath];
+        publicCell.headLabel.text = @"套套天堂";
+        publicCell.detailsLabel.text = @"/taotaotaintang";
+        [publicCell buildeConfigBannerScrollViewWithImages:self.hardImageArray];
+        return publicCell;
+
     } else {
     
         UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];

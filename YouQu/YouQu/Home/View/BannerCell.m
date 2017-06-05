@@ -7,7 +7,6 @@
 //
 
 #import "BannerCell.h"
-#import "XMLBannerScrollView.h"
 
 @interface BannerCell()<CCCycleScrollViewClickActionDeleage>
 
@@ -41,6 +40,9 @@
 //建造banner
 - (void)buildeBannerScrollViewWithHigh:(CGFloat)high andImageArr:(NSArray *)imageArr {
 
+    //防止复用
+    [Tool solveReuseCellWithView:self.contentView];
+    
     self.bannerScrollView = [[XMLBannerScrollView alloc] initWithImages:imageArr withFrame:CGRectMake(0, 0, SCREEN_WIDTH, high)];
     NSLog(@"----%ld",imageArr.count);
     self.bannerScrollView.delegate = self;

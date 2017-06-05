@@ -8,6 +8,7 @@
 
 
 #import "Tool.h"
+#import "XMLBannerScrollView.h"
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch

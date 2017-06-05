@@ -30,6 +30,8 @@
 		96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DEB1EE025750086D941 /* TimeLimitCell.m */; };
 		96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */; };
 		96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */; };
+		96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */; };
+		96FE7CCE1EE25E50002B2835 /* PublicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE7CCD1EE25E50002B2835 /* PublicCell.m */; };
 		B8175BE8DC17CE9FE97C415D /* libPods-YouQu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 980EC4FB8D230211AEE16846 /* libPods-YouQu.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,10 @@
 		96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitCommodityCell.m; sourceTree = "<group>"; };
 		96ED4ACD1EE11A4100FE4F64 /* LimitCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitCollCell.h; sourceTree = "<group>"; };
 		96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitCollCell.m; sourceTree = "<group>"; };
+		96FE7CC91EE24D5E002B2835 /* HotCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCollCell.h; sourceTree = "<group>"; };
+		96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCollCell.m; sourceTree = "<group>"; };
+		96FE7CCC1EE25E50002B2835 /* PublicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicCell.h; sourceTree = "<group>"; };
+		96FE7CCD1EE25E50002B2835 /* PublicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicCell.m; sourceTree = "<group>"; };
 		980EC4FB8D230211AEE16846 /* libPods-YouQu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouQu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -222,6 +228,10 @@
 				96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */,
 				969CE97A1EE1543A001B07DF /* HotHeadCell.h */,
 				969CE97B1EE1543A001B07DF /* HotHeadCell.m */,
+				96FE7CC91EE24D5E002B2835 /* HotCollCell.h */,
+				96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */,
+				96FE7CCC1EE25E50002B2835 /* PublicCell.h */,
+				96FE7CCD1EE25E50002B2835 /* PublicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FE7CCE1EE25E50002B2835 /* PublicCell.m in Sources */,
 				9693797C1EDE74E90057AA43 /* Tool.m in Sources */,
 				969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */,
 				96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */,
@@ -490,6 +501,7 @@
 				96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */,
 				96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */,
 				96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */,
+				96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */,
 				969CE97C1EE1543A001B07DF /* HotHeadCell.m in Sources */,
 				96895E6C1EDE60DA001EF130 /* RootTabBarController.m in Sources */,
 				96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */,

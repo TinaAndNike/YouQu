@@ -10,8 +10,4 @@
 
 @interface HotHeadCell : UITableViewCell
 
-@property (nonatomic, strong)UIImageView * hotHeadView;
-
-- (void)initHotHeadImageView:(UIImage *)image;
-
 @end
