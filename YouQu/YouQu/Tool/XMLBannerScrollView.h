@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLPageControl.h"
 
 typedef NS_ENUM(int,CCCycleScrollPageViewPosition){
     
@@ -33,7 +34,7 @@ typedef NS_ENUM(int,CCCycleScrollPageViewPosition){
 @property (nonatomic, readwrite, strong)NSArray *images;
 @property (nonatomic, readwrite, strong)NSArray *pageDescrips;
 @property (nonatomic, readwrite, strong)UILabel *pageDescripLabel;
-@property (nonatomic, readwrite, strong)UIPageControl *pageControl;
+@property (nonatomic, readwrite, strong)XMLPageControl *pageControl;
 @property (nonatomic, assign)NSTimeInterval  pageChangeTime;
 @property (nonatomic, assign)CCCycleScrollPageViewPosition pageLocation;
 @property (nonatomic, weak)id<CCCycleScrollViewClickActionDeleage>delegate;

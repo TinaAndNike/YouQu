@@ -25,6 +25,9 @@
 		9693797C1EDE74E90057AA43 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9693797B1EDE74E90057AA43 /* Tool.m */; };
 		969CE97C1EE1543A001B07DF /* HotHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 969CE97B1EE1543A001B07DF /* HotHeadCell.m */; };
 		969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 969CE97E1EE163B7001B07DF /* XMLBannerScrollView.m */; };
+		96D5415F1EE50D7A0063B2A0 /* XMLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D5415E1EE50D7A0063B2A0 /* XMLPageControl.m */; };
+		96D541651EE54D8E0063B2A0 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D541641EE54D8E0063B2A0 /* RecommendCell.m */; };
+		96D541681EE54FD30063B2A0 /* RecommendCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D541671EE54FD30063B2A0 /* RecommendCollCell.m */; };
 		96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE21EDFEF170086D941 /* BannerCell.m */; };
 		96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE51EDFEF440086D941 /* ClassifyCell.m */; };
 		96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DEB1EE025750086D941 /* TimeLimitCell.m */; };
@@ -73,6 +76,12 @@
 		969CE97B1EE1543A001B07DF /* HotHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotHeadCell.m; sourceTree = "<group>"; };
 		969CE97D1EE163B7001B07DF /* XMLBannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLBannerScrollView.h; sourceTree = "<group>"; };
 		969CE97E1EE163B7001B07DF /* XMLBannerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLBannerScrollView.m; sourceTree = "<group>"; };
+		96D5415D1EE50D7A0063B2A0 /* XMLPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLPageControl.h; sourceTree = "<group>"; };
+		96D5415E1EE50D7A0063B2A0 /* XMLPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLPageControl.m; sourceTree = "<group>"; };
+		96D541631EE54D8E0063B2A0 /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
+		96D541641EE54D8E0063B2A0 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
+		96D541661EE54FD30063B2A0 /* RecommendCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCollCell.h; sourceTree = "<group>"; };
+		96D541671EE54FD30063B2A0 /* RecommendCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCollCell.m; sourceTree = "<group>"; };
 		96DE8DE11EDFEF170086D941 /* BannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
 		96DE8DE21EDFEF170086D941 /* BannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerCell.m; sourceTree = "<group>"; };
 		96DE8DE41EDFEF440086D941 /* ClassifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyCell.h; sourceTree = "<group>"; };
@@ -232,6 +241,10 @@
 				96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */,
 				96FE7CCC1EE25E50002B2835 /* PublicCell.h */,
 				96FE7CCD1EE25E50002B2835 /* PublicCell.m */,
+				96D541631EE54D8E0063B2A0 /* RecommendCell.h */,
+				96D541641EE54D8E0063B2A0 /* RecommendCell.m */,
+				96D541661EE54FD30063B2A0 /* RecommendCollCell.h */,
+				96D541671EE54FD30063B2A0 /* RecommendCollCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +345,8 @@
 				9693797B1EDE74E90057AA43 /* Tool.m */,
 				969CE97D1EE163B7001B07DF /* XMLBannerScrollView.h */,
 				969CE97E1EE163B7001B07DF /* XMLBannerScrollView.m */,
+				96D5415D1EE50D7A0063B2A0 /* XMLPageControl.h */,
+				96D5415E1EE50D7A0063B2A0 /* XMLPageControl.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -498,10 +513,13 @@
 				96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */,
 				96895E7A1EDE682B001EF130 /* CommunityViewController.m in Sources */,
 				96895E471EDE5A9D001EF130 /* ViewController.m in Sources */,
+				96D541681EE54FD30063B2A0 /* RecommendCollCell.m in Sources */,
+				96D5415F1EE50D7A0063B2A0 /* XMLPageControl.m in Sources */,
 				96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */,
 				96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */,
 				96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */,
 				96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */,
+				96D541651EE54D8E0063B2A0 /* RecommendCell.m in Sources */,
 				969CE97C1EE1543A001B07DF /* HotHeadCell.m in Sources */,
 				96895E6C1EDE60DA001EF130 /* RootTabBarController.m in Sources */,
 				96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */,

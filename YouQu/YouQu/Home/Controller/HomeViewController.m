@@ -13,6 +13,7 @@
 #import "LimitCommodityCell.h"
 #import "HotHeadCell.h"
 #import "PublicCell.h"
+#import "RecommendCell.h"
 
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -34,6 +35,9 @@
 
 //bannerArray
 @property (nonatomic, strong)NSMutableArray * hardImageArray;
+
+//publicArrayAndDict
+@property (nonatomic, strong)NSDictionary * publicDict;
 
 @end
 
@@ -66,6 +70,14 @@
     return _hardImageArray;
 }
 
+- (NSDictionary *)publicDict {
+
+    if (_publicDict == nil) {
+        
+        _publicDict = @{@"imageName":@"publicImage2",@"titleStr":@"我是产品",@"detailsStr":@"买一送一"};
+    }
+    return _publicDict;
+}
 #pragma mark - 隐藏Nav和页面将要出现和消失
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -92,13 +104,13 @@
     _homeNavImageView.userInteractionEnabled = YES;
     [_transImageView addSubview:_homeNavImageView];
     
-    _leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 28, 28)];
+    _leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 26, 28, 28)];
     [_leftBtn setBackgroundImage:[UIImage imageNamed:@"nav_left_image"] forState:UIControlStateNormal];
     _leftBtn.highlighted = NO;
     [_leftBtn addTarget:self action:@selector(navBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [_transImageView addSubview:_leftBtn];
     
-    _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 48, 20, 28, 28)];
+    _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 38, 26, 28, 28)];
     [_rightBtn setBackgroundImage:[UIImage imageNamed:@"nav_right_image"] forState:UIControlStateNormal];
     _rightBtn.highlighted = NO;
     [_rightBtn addTarget:self action:@selector(navBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -127,7 +139,7 @@
 - (void)buildeTableView {
 
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_HEIGHT + 20) style:UITableViewStylePlain];
-    _tableView.backgroundColor = [UIColor grayColor];
+    _tableView.backgroundColor = [UIColor whiteColor];
     _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -143,14 +155,14 @@
     [_tableView registerClass:[HotHeadCell class] forCellReuseIdentifier:@"hotHeadCell"];
     //publicCell
     [_tableView registerClass:[PublicCell class] forCellReuseIdentifier:@"publicCell"];
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [_tableView registerClass:[RecommendCell class] forCellReuseIdentifier:@"recommendCell"];
     [self.view addSubview:_tableView];
 }
 
 #define mark - tableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 20;
+    return 10;
 }
 
 #pragma mark - Cell的高度
@@ -173,10 +185,19 @@
         return 199 * SPHEIGHT;
     } else if (indexPath.row == 5) {
     
-        return 445 * SPHEIGHT;
+        return 445 * SPHEIGHT + (15 * SPHEIGHT);
+    } else if (indexPath.row == 6) {
+    
+        return 528 * SPHEIGHT + (15 * SPHEIGHT);
+    } else if (indexPath.row == 7) {
+    
+        return 445 * SPHEIGHT + (15 * SPHEIGHT);
+    } else if (indexPath.row == 8) {
+    
+        return 445 * SPHEIGHT + (15 * SPHEIGHT);
     } else {
     
-        return 50;
+        return 440 * SPHEIGHT + (35 * SPHEIGHT);
     }
 }
 
@@ -187,6 +208,7 @@
         
         BannerCell * bannerCell = [tableView dequeueReusableCellWithIdentifier:@"bannerCell" forIndexPath:indexPath];
         [bannerCell buildeBannerScrollViewWithHigh:180 * SPHEIGHT andImageArr:self.hardImageArray];
+        bannerCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return bannerCell;
     } else if (indexPath.row == 1) {
     
@@ -198,33 +220,68 @@
     } else if (indexPath.row == 2) {
     
         TimeLimitCell * timeLimitCell = [tableView dequeueReusableCellWithIdentifier:@"timeLimitCell" forIndexPath:indexPath];
+        timeLimitCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [timeLimitCell createTimeLimit];
         return timeLimitCell;
         
     } else if (indexPath.row == 3){
     
         LimitCommodityCell * commodityCell = [tableView dequeueReusableCellWithIdentifier:@"commodityCell" forIndexPath:indexPath];
+        commodityCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return commodityCell;
         
     } else if (indexPath.row == 4){
     
         HotHeadCell * hotHeadCell = [tableView dequeueReusableCellWithIdentifier:@"hotHeadCell" forIndexPath:indexPath];
-        
+        hotHeadCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return hotHeadCell;
        
     } else if (indexPath.row == 5) {
     
         PublicCell * publicCell = [tableView dequeueReusableCellWithIdentifier:@"publicCell" forIndexPath:indexPath];
-        publicCell.headLabel.text = @"套套天堂";
-        publicCell.detailsLabel.text = @"/taotaotaintang";
-        [publicCell buildeConfigBannerScrollViewWithImages:self.hardImageArray];
+        publicCell.backgroundColor = HEXCOLOR(0xf2f2f2);
+        publicCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [publicCell initConfigHeadViewWithHeadText:@"套套天堂" detailsText:@"/taotaotaintang"];
+        [publicCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109 * SPHEIGHT];
+        [publicCell buildeBottomViewWihtDict:self.publicDict];
         return publicCell;
 
+    } else if (indexPath.row == 6) {
+    
+        PublicCell * publicUnderwearCell = [tableView dequeueReusableCellWithIdentifier:@"publicCell" forIndexPath:indexPath];
+        publicUnderwearCell.backgroundColor = HEXCOLOR(0xf2f2f2);
+        publicUnderwearCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [publicUnderwearCell initConfigHeadViewWithHeadText:@"情趣内衣" detailsText:@"/qingquneiyi"];
+        [publicUnderwearCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:231 * SPHEIGHT];
+        [publicUnderwearCell buildeUnderwearBottmViewWithDict:self.publicDict];
+        return publicUnderwearCell;
+        
+    } else if (indexPath.row == 7) {
+    
+        PublicCell * publicNanToyCell = [tableView dequeueReusableCellWithIdentifier:@"publicCell" forIndexPath:indexPath];
+        publicNanToyCell.backgroundColor = HEXCOLOR(0xf2f2f2);
+        publicNanToyCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [publicNanToyCell initConfigHeadViewWithHeadText:@"男用玩具" detailsText:@"/nanyongwanju"];
+        [publicNanToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109 * SPHEIGHT];
+        [publicNanToyCell buildeBottomViewWihtDict:self.publicDict];
+        return publicNanToyCell;
+
+
+    } else if (indexPath.row == 8) {
+    
+        PublicCell * publicNavToyCell = [tableView dequeueReusableCellWithIdentifier:@"publicCell" forIndexPath:indexPath];
+        publicNavToyCell.backgroundColor = HEXCOLOR(0xf2f2f2);
+        publicNavToyCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [publicNavToyCell initConfigHeadViewWithHeadText:@"女用玩具" detailsText:@"/nvyongwanju"];
+        [publicNavToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109 * SPHEIGHT];
+        [publicNavToyCell buildeBottomViewWihtDict:self.publicDict];
+        return publicNavToyCell;
+
+        
     } else {
     
-        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        cell.textLabel.text = @"Tina";
-        return cell;
+        RecommendCell * recommendCell = [tableView dequeueReusableCellWithIdentifier:@"recommendCell" forIndexPath:indexPath];
+        return recommendCell;
     }
 }
 

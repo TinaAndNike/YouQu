@@ -16,9 +16,22 @@
 
 @property (nonatomic, strong)UILabel * detailsLabel;
 
+- (void)initConfigHeadViewWithHeadText:(NSString *)headText detailsText:(NSString *)detailsText;
+
 
 @property (nonatomic, strong)XMLBannerScrollView * bannerScrollView;
 
-- (void)buildeConfigBannerScrollViewWithImages:(NSArray *)images;
+- (void)buildeConfigBannerScrollViewWithImages:(NSArray *)images bannerHight:(CGFloat)hight;
+
+
+//底视图样式一
+@property (nonatomic, strong)UIView * bottomView;
+
+- (void)buildeBottomViewWihtDict:(NSDictionary *)dict;
+
+//底视图样式二
+@property (nonatomic, strong)UIView * underwearBottomView;
+
+- (void)buildeUnderwearBottmViewWithDict:(NSDictionary *)dict;
 
 @end

@@ -102,9 +102,9 @@
 
 - (void)pageControlCongfig
 {
-    _pageControl = [[UIPageControl alloc]init];
+    _pageControl = [[XMLPageControl alloc]init];
     _pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
-    _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+    _pageControl.pageIndicatorTintColor = [UIColor blackColor];
     _pageControl.currentPage = 0;
     [self pageControlPosition:_pageLocation];
     [self addSubview:_pageControl];
@@ -210,7 +210,7 @@
 {
     
     if (position == CCCycleScrollPageViewPositionBottomCenter ) {
-        _pageControl.frame = CGRectMake(self.center.x - 50, self.frame.size.height -30, 100, 30);
+        _pageControl.frame = CGRectMake(self.center.x - 50, self.frame.size.height -20, 100, 30);
     }else if (position == CCCycleScrollPageViewPositionBottomLeft)
     {
         _pageControl.frame = CGRectMake(50, self.frame.size.height -30, 100, 30);
