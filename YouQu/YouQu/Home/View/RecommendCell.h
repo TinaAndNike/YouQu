@@ -10,4 +10,6 @@
 
 @interface RecommendCell : UITableViewCell
 
+@property (nonatomic, copy)void(^RecommendHight)(CGFloat);
+
 @end

@@ -52,7 +52,7 @@
 
 - (void)buildeConfigBannerScrollViewWithImages:(NSArray *)images bannerHight:(CGFloat)hight{
    
-    _bannerScrollView = [[XMLBannerScrollView alloc] initWithImages:images withFrame:CGRectMake(0, CGRectGetMaxY(_headView.frame), SCREEN_WIDTH, hight)];
+    _bannerScrollView = [[XMLBannerScrollView alloc] initWithImages:images withFrame:CGRectMake(0, CGRectGetMaxY(_headView.frame), SCREEN_WIDTH, hight * SPHEIGHT)];
     _bannerScrollView.delegate = self;
     _bannerScrollView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:_bannerScrollView];

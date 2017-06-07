@@ -33,6 +33,8 @@
 		96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DEB1EE025750086D941 /* TimeLimitCell.m */; };
 		96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */; };
 		96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */; };
+		96F403521EE69109004355F8 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F403511EE69109004355F8 /* TitleCell.m */; };
+		96F403551EE6972F004355F8 /* HotPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F403541EE6972F004355F8 /* HotPostCell.m */; };
 		96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */; };
 		96FE7CCE1EE25E50002B2835 /* PublicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE7CCD1EE25E50002B2835 /* PublicCell.m */; };
 		B8175BE8DC17CE9FE97C415D /* libPods-YouQu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 980EC4FB8D230211AEE16846 /* libPods-YouQu.a */; };
@@ -92,6 +94,10 @@
 		96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitCommodityCell.m; sourceTree = "<group>"; };
 		96ED4ACD1EE11A4100FE4F64 /* LimitCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitCollCell.h; sourceTree = "<group>"; };
 		96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitCollCell.m; sourceTree = "<group>"; };
+		96F403501EE69109004355F8 /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
+		96F403511EE69109004355F8 /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
+		96F403531EE6972F004355F8 /* HotPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPostCell.h; sourceTree = "<group>"; };
+		96F403541EE6972F004355F8 /* HotPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPostCell.m; sourceTree = "<group>"; };
 		96FE7CC91EE24D5E002B2835 /* HotCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCollCell.h; sourceTree = "<group>"; };
 		96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCollCell.m; sourceTree = "<group>"; };
 		96FE7CCC1EE25E50002B2835 /* PublicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicCell.h; sourceTree = "<group>"; };
@@ -192,6 +198,10 @@
 		96895E591EDE5B49001EF130 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96F403501EE69109004355F8 /* TitleCell.h */,
+				96F403511EE69109004355F8 /* TitleCell.m */,
+				96F403531EE6972F004355F8 /* HotPostCell.h */,
+				96F403541EE6972F004355F8 /* HotPostCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F403551EE6972F004355F8 /* HotPostCell.m in Sources */,
 				96FE7CCE1EE25E50002B2835 /* PublicCell.m in Sources */,
 				9693797C1EDE74E90057AA43 /* Tool.m in Sources */,
 				969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */,
@@ -530,6 +541,7 @@
 				96895E741EDE67F5001EF130 /* HomeViewController.m in Sources */,
 				96895E831EDE699F001EF130 /* TabBarView.m in Sources */,
 				96895E771EDE6810001EF130 /* ShoppingViewController.m in Sources */,
+				96F403521EE69109004355F8 /* TitleCell.m in Sources */,
 				96895E801EDE68D1001EF130 /* RootNavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,6 @@
 
 @property (nonatomic, strong)UIButton * rightBtn;
 
-@property (nonatomic, strong)UIBarButtonItem * rightItem;
 
 @property (nonatomic, assign)BOOL isAlpah;
 
@@ -207,7 +206,7 @@
     if (indexPath.row == 0) {
         
         BannerCell * bannerCell = [tableView dequeueReusableCellWithIdentifier:@"bannerCell" forIndexPath:indexPath];
-        [bannerCell buildeBannerScrollViewWithHigh:180 * SPHEIGHT andImageArr:self.hardImageArray];
+        [bannerCell buildeBannerScrollViewWithHigh:180 andImageArr:self.hardImageArray];
         bannerCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return bannerCell;
     } else if (indexPath.row == 1) {
@@ -242,7 +241,7 @@
         publicCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicCell initConfigHeadViewWithHeadText:@"套套天堂" detailsText:@"/taotaotaintang"];
-        [publicCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109 * SPHEIGHT];
+        [publicCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109];
         [publicCell buildeBottomViewWihtDict:self.publicDict];
         return publicCell;
 
@@ -252,7 +251,7 @@
         publicUnderwearCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicUnderwearCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicUnderwearCell initConfigHeadViewWithHeadText:@"情趣内衣" detailsText:@"/qingquneiyi"];
-        [publicUnderwearCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:231 * SPHEIGHT];
+        [publicUnderwearCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:231];
         [publicUnderwearCell buildeUnderwearBottmViewWithDict:self.publicDict];
         return publicUnderwearCell;
         
@@ -262,7 +261,7 @@
         publicNanToyCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicNanToyCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicNanToyCell initConfigHeadViewWithHeadText:@"男用玩具" detailsText:@"/nanyongwanju"];
-        [publicNanToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109 * SPHEIGHT];
+        [publicNanToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109];
         [publicNanToyCell buildeBottomViewWihtDict:self.publicDict];
         return publicNanToyCell;
 
@@ -273,7 +272,7 @@
         publicNavToyCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicNavToyCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicNavToyCell initConfigHeadViewWithHeadText:@"女用玩具" detailsText:@"/nvyongwanju"];
-        [publicNavToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109 * SPHEIGHT];
+        [publicNavToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109];
         [publicNavToyCell buildeBottomViewWihtDict:self.publicDict];
         return publicNavToyCell;
 

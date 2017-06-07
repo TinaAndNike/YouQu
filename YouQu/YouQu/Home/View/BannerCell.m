@@ -43,7 +43,7 @@
     //防止复用
     [Tool solveReuseCellWithView:self.contentView];
     
-    self.bannerScrollView = [[XMLBannerScrollView alloc] initWithImages:imageArr withFrame:CGRectMake(0, 0, SCREEN_WIDTH, high)];
+    self.bannerScrollView = [[XMLBannerScrollView alloc] initWithImages:imageArr withFrame:CGRectMake(0, 0, SCREEN_WIDTH, high * SPHEIGHT)];
     NSLog(@"----%ld",imageArr.count);
     self.bannerScrollView.delegate = self;
     self.bannerScrollView.backgroundColor = [UIColor orangeColor];
