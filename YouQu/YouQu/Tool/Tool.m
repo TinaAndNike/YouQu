@@ -52,6 +52,33 @@
     return label;
 }
 
++ (UILabel *)giveMeAdaptiveLabelWithPoint:(CGPoint)point Width:(CGFloat)width text:(NSString *)text textColor:(UIColor *)textColor backgroudColor:(UIColor *)bgColor fontSize:(CGFloat)fontSize weight:(CGFloat)weigt numberOfLines:(int)numberLines{
+
+    UILabel * label = [[UILabel alloc] init];
+    label.text = text;
+    label.textColor = textColor;
+    if (bgColor == nil) {
+        
+        label.backgroundColor = [UIColor clearColor];
+    } else {
+        
+        label.backgroundColor = bgColor;
+    }
+    if (weigt == 0) {
+        
+        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT];
+    } else {
+        
+        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT weight:weigt];
+    }
+    label.numberOfLines = numberLines;
+    label.lineBreakMode = NSLineBreakByTruncatingTail;
+    CGSize adaptiveSize = CGSizeMake(width, MAXFLOAT);
+    CGSize labelSize = [label sizeThatFits:adaptiveSize];
+    label.frame = CGRectMake(point.x, point.y, labelSize.width, labelSize.height);
+    return label;
+}
+
 + (UIButton *)giveMeAButtonWithRect:(CGRect)rect title:(NSString *)title titleColor:(UIColor *)titleColor barkgroudColor:(UIColor *)bgColor barkgroudImage:(UIImage *)image fontOfSize:(CGFloat) fontSize{
 
     UIButton * btn = [[UIButton alloc] initWithFrame:rect];
@@ -71,6 +98,21 @@
     }
     
     return btn;
+}
+
++ (CGFloat)getWidthWithTitle:(NSString *)title fontSize:(CGFloat )fontSize weigt:(CGFloat)weigt{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 1000, 0)];
+    label.text = title;
+    
+    if (weigt == 0) {
+        
+        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT];
+    } else {
+        
+        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT weight:weigt];
+    }
+    [label sizeToFit];
+    return label.frame.size.width;
 }
 
 + (void)solveReuseCellWithView:(UIView *)superView {

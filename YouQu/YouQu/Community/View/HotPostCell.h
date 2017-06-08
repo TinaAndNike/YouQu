@@ -10,6 +10,10 @@
 
 @interface HotPostCell : UITableViewCell
 
-- (void)initStyleOnelabelText:(NSString *)text imageViewArray:(NSArray *)array postImage:(UIImage *)image postText:(NSString *)postText;
+//样式一
+- (void)initStyleOnelabelText:(NSString *)text imageViewArray:(NSArray *)array postImage:(UIImage *)image postText:(NSString *)postText DotText:(NSString *)dotText commentText:(NSString *)commentText oneStyleDymHight:(void (^)(CGFloat hight))hight;
+
+//样式二
+- (void)initStyleTwolabelText:(NSString *)text detailsText:(NSString *)detailsText twoStyleImage:(UIImage *)twoImage postImage:(UIImage *)postImage postText:(NSString *)postText DotText:(NSString *)dotText commentText:(NSString *)commentText oneStyleDymHight:(void(^)(CGFloat hight)) hight;
 
 @end

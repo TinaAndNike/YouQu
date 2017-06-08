@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		962C80BD1EE8FBE0000734E3 /* CircleContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C80BB1EE8FBE0000734E3 /* CircleContentCell.m */; };
+		962C80BE1EE8FBE0000734E3 /* CircleContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962C80BC1EE8FBE0000734E3 /* CircleContentCell.xib */; };
+		962C80C21EE92C09000734E3 /* RecCircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C80C01EE92C09000734E3 /* RecCircleCell.m */; };
+		962C80C31EE92C09000734E3 /* RecCircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962C80C11EE92C09000734E3 /* RecCircleCell.xib */; };
 		96895E411EDE5A9D001EF130 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E401EDE5A9D001EF130 /* main.m */; };
 		96895E441EDE5A9D001EF130 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E431EDE5A9D001EF130 /* AppDelegate.m */; };
 		96895E471EDE5A9D001EF130 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E461EDE5A9D001EF130 /* ViewController.m */; };
@@ -33,6 +37,8 @@
 		96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DEB1EE025750086D941 /* TimeLimitCell.m */; };
 		96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */; };
 		96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */; };
+		96F21FA61EE8F3E800A7A46C /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F21FA41EE8F3E800A7A46C /* CircleCell.m */; };
+		96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F21FA51EE8F3E800A7A46C /* CircleCell.xib */; };
 		96F403521EE69109004355F8 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F403511EE69109004355F8 /* TitleCell.m */; };
 		96F403551EE6972F004355F8 /* HotPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F403541EE6972F004355F8 /* HotPostCell.m */; };
 		96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */; };
@@ -43,6 +49,12 @@
 /* Begin PBXFileReference section */
 		24AD4F3DCDE7AC5C87636A04 /* Pods-YouQu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouQu.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouQu/Pods-YouQu.release.xcconfig"; sourceTree = "<group>"; };
 		6061BE328E0227450853C107 /* Pods-YouQu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouQu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouQu/Pods-YouQu.debug.xcconfig"; sourceTree = "<group>"; };
+		962C80BA1EE8FBE0000734E3 /* CircleContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleContentCell.h; sourceTree = "<group>"; };
+		962C80BB1EE8FBE0000734E3 /* CircleContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleContentCell.m; sourceTree = "<group>"; };
+		962C80BC1EE8FBE0000734E3 /* CircleContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleContentCell.xib; sourceTree = "<group>"; };
+		962C80BF1EE92C09000734E3 /* RecCircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecCircleCell.h; sourceTree = "<group>"; };
+		962C80C01EE92C09000734E3 /* RecCircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecCircleCell.m; sourceTree = "<group>"; };
+		962C80C11EE92C09000734E3 /* RecCircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecCircleCell.xib; sourceTree = "<group>"; };
 		96895E3C1EDE5A9D001EF130 /* YouQu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouQu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96895E401EDE5A9D001EF130 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96895E421EDE5A9D001EF130 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +106,9 @@
 		96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitCommodityCell.m; sourceTree = "<group>"; };
 		96ED4ACD1EE11A4100FE4F64 /* LimitCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitCollCell.h; sourceTree = "<group>"; };
 		96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitCollCell.m; sourceTree = "<group>"; };
+		96F21FA31EE8F3E800A7A46C /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
+		96F21FA41EE8F3E800A7A46C /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
+		96F21FA51EE8F3E800A7A46C /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
 		96F403501EE69109004355F8 /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
 		96F403511EE69109004355F8 /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
 		96F403531EE6972F004355F8 /* HotPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPostCell.h; sourceTree = "<group>"; };
@@ -202,6 +217,15 @@
 				96F403511EE69109004355F8 /* TitleCell.m */,
 				96F403531EE6972F004355F8 /* HotPostCell.h */,
 				96F403541EE6972F004355F8 /* HotPostCell.m */,
+				96F21FA31EE8F3E800A7A46C /* CircleCell.h */,
+				96F21FA41EE8F3E800A7A46C /* CircleCell.m */,
+				96F21FA51EE8F3E800A7A46C /* CircleCell.xib */,
+				962C80BA1EE8FBE0000734E3 /* CircleContentCell.h */,
+				962C80BB1EE8FBE0000734E3 /* CircleContentCell.m */,
+				962C80BC1EE8FBE0000734E3 /* CircleContentCell.xib */,
+				962C80BF1EE92C09000734E3 /* RecCircleCell.h */,
+				962C80C01EE92C09000734E3 /* RecCircleCell.m */,
+				962C80C11EE92C09000734E3 /* RecCircleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,8 +480,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96895E4F1EDE5A9E001EF130 /* LaunchScreen.storyboard in Resources */,
+				96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */,
 				96895E4C1EDE5A9E001EF130 /* Assets.xcassets in Resources */,
 				96895E4A1EDE5A9E001EF130 /* Main.storyboard in Resources */,
+				962C80C31EE92C09000734E3 /* RecCircleCell.xib in Resources */,
+				962C80BE1EE8FBE0000734E3 /* CircleContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +548,7 @@
 				9693797C1EDE74E90057AA43 /* Tool.m in Sources */,
 				969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */,
 				96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */,
+				962C80BD1EE8FBE0000734E3 /* CircleContentCell.m in Sources */,
 				96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */,
 				96895E7A1EDE682B001EF130 /* CommunityViewController.m in Sources */,
 				96895E471EDE5A9D001EF130 /* ViewController.m in Sources */,
@@ -539,8 +567,10 @@
 				96895E701EDE63C9001EF130 /* RootViewController.m in Sources */,
 				96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */,
 				96895E741EDE67F5001EF130 /* HomeViewController.m in Sources */,
+				962C80C21EE92C09000734E3 /* RecCircleCell.m in Sources */,
 				96895E831EDE699F001EF130 /* TabBarView.m in Sources */,
 				96895E771EDE6810001EF130 /* ShoppingViewController.m in Sources */,
+				96F21FA61EE8F3E800A7A46C /* CircleCell.m in Sources */,
 				96F403521EE69109004355F8 /* TitleCell.m in Sources */,
 				96895E801EDE68D1001EF130 /* RootNavController.m in Sources */,
 			);

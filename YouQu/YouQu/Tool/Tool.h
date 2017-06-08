@@ -18,7 +18,11 @@
 
 + (UILabel *)giveMeALabelWithRect:(CGRect)rect text:(NSString *)text textColor:(UIColor *)textColor backgroudColor:(UIColor *)bgColor fontSize:(CGFloat)fontSize weight:(CGFloat)weigt;
 
++ (UILabel *)giveMeAdaptiveLabelWithPoint:(CGPoint)point Width:(CGFloat)width text:(NSString *)text textColor:(UIColor *)textColor backgroudColor:(UIColor *)bgColor fontSize:(CGFloat)fontSize weight:(CGFloat)weigt numberOfLines:(int)numberLines;
+
 + (UIButton *)giveMeAButtonWithRect:(CGRect)rect title:(NSString *)title titleColor:(UIColor *)titleColor barkgroudColor:(UIColor *)bgColor barkgroudImage:(UIImage *)image fontOfSize:(CGFloat) fontSize;
+//自适应宽度
++ (CGFloat)getWidthWithTitle:(NSString *)title fontSize:(CGFloat )fontSize weigt:(CGFloat)weigt;
 
 + (void)solveReuseCellWithView:(UIView *)superView;
 

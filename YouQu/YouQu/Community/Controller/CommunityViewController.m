@@ -10,6 +10,9 @@
 #import "BannerCell.h"
 #import "TitleCell.h"
 #import "HotPostCell.h"
+#import "CircleCell.h"
+#import "CircleContentCell.h"
+#import "RecCircleCell.h"
 
 @interface CommunityViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -19,24 +22,31 @@
 @property (nonatomic, strong)UIButton * navLeftBtn;
 
 @property (nonatomic, strong)UIButton * navRightBtn;
-
+//nav上的帖子按钮
 @property (nonatomic, strong)UIButton * hotPostBtn;
-
+//nav上的圈子按钮
 @property (nonatomic, strong)UIButton * circleBtn;
-
+//移动的线
 @property (nonatomic, strong)UIView * navLineView;
+
 
 //ScrollView
 @property (nonatomic, strong)UIScrollView * scrollView;
-
+//帖子
 @property (nonatomic, strong)UIView * hotPostView;
-
+//圈子
 @property (nonatomic, strong)UIView * circleView;
+
 
 //tableView
 @property (nonatomic, strong)UITableView * hotPostTableView;
 
 @property (nonatomic, strong)UITableView * circleTableView;
+
+//动态dynamic接收cell高度，只是主标题的高度
+@property (nonatomic, assign)CGFloat oneStyleDynHight;
+
+@property (nonatomic, assign)CGFloat oneStyleImageHight;
 
 //存储轮播图
 @property (nonatomic, strong)NSMutableArray * comBannerArray;
@@ -203,7 +213,7 @@
     [_hotPostView addSubview:_hotPostTableView];
     _hotPostTableView.delegate = self;
     _hotPostTableView.dataSource = self;
-    _hotPostTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+//    _hotPostTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     //注册复用cell
     //轮播图
     [_hotPostTableView registerClass:[BannerCell class] forCellReuseIdentifier:@"comBanCell"];
@@ -225,6 +235,10 @@
     _circleTableView.dataSource = self;
     _circleTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     //注册复用cell
+    //titlexib视图
+    [_circleTableView registerNib:[UINib nibWithNibName:@"CircleCell" bundle:nil] forCellReuseIdentifier:@"CircleTitleCell"];
+    [_circleTableView registerNib:[UINib nibWithNibName:@"CircleContentCell" bundle:nil] forCellReuseIdentifier:@"cContentCell"];
+    [_circleTableView registerNib:[UINib nibWithNibName:@"RecCircleCell" bundle:nil] forCellReuseIdentifier:@"recCell"];
     [_circleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"circleCell"];
     
 }
@@ -237,7 +251,7 @@
         return 20;
     } else {
     
-        return 12;
+        return 11;
     }
 }
 
@@ -251,16 +265,28 @@
         } else if (indexPath.row == 1) {
         
             return 48 * SPHEIGHT;
-        } else if (indexPath.row == 2) {
-        
-            return 255 * SPHEIGHT;
         } else {
         
-            return 50;
+            return _oneStyleDynHight;
         }
     } else {
     
-        return 50;
+        if (indexPath.row == 0) {
+            
+            return 50 * SPHEIGHT;
+        } else if (indexPath.row <= 1 || indexPath.row <= 4) {
+        
+            return 80;
+        } else if (indexPath.row == 5) {
+        
+            return 15;
+        } else if (indexPath.row == 6) {
+        
+            return 50 * SPHEIGHT;
+        }
+        
+        
+        return 140;
     }
 }
 
@@ -285,59 +311,87 @@
             titleCell.titleLabel.text = @"热帖推荐";
             return titleCell;
 
-        } else if (indexPath.row == 2) {
-        
-            HotPostCell * hotPostCell = [tableView dequeueReusableCellWithIdentifier:@"comPostCell" forIndexPath:indexPath];
-            hotPostCell.selectionStyle = UITableViewCellSelectionStyleNone;
-            [hotPostCell initStyleOnelabelText:@"同城交友不" imageViewArray:self.hotStyleOneAry postImage:[UIImage imageNamed:@"cityFriend"] postText:@"同城交友"];
-            return hotPostCell;
         } else {
         
-            UITableViewCell * hotCell = [tableView dequeueReusableCellWithIdentifier:@"hotCell" forIndexPath:indexPath];
-            hotCell.textLabel.text = @"Tina";
-            return hotCell;
+            if (indexPath.row % 2 == 0) {
+                
+                HotPostCell * oneStyleCell = [tableView dequeueReusableCellWithIdentifier:@"comPostCell" forIndexPath:indexPath];
+                oneStyleCell.selectionStyle = UITableViewCellSelectionStyleNone;
+                [oneStyleCell initStyleOnelabelText:@"快来看这朵花" imageViewArray:self.hotStyleOneAry postImage:[UIImage imageNamed:@"cityFriend"] postText:@"同城交友" DotText:@"888" commentText:@"999" oneStyleDymHight:^(CGFloat hight) {
+                    
+                    _oneStyleDynHight = hight;
+                }];
+                return oneStyleCell;
+            } else {
+            
+                HotPostCell * twoStyleCell = [tableView dequeueReusableCellWithIdentifier:@"comPostCell" forIndexPath:indexPath];
+                twoStyleCell.selectionStyle = UITableViewCellSelectionStyleNone;
+                [twoStyleCell initStyleTwolabelText:@"我于杀戮中绽放亦如黎明中的花朵" detailsText:@"我于杀戮中绽放亦如黎明中的花朵我于杀戮中绽放亦如黎明中的花朵我于杀戮中绽放" twoStyleImage:[UIImage imageNamed:@"styleOne_01.JPG"] postImage:[UIImage imageNamed:@"cityFriend"] postText:@"同城不交友" DotText:@"888" commentText:@"999" oneStyleDymHight:^(CGFloat hight) {
+                
+                    _oneStyleDynHight = hight;
+                }];
+                return twoStyleCell;
+            }
         }
         
     } else {
     
-        UITableViewCell * hotCell = [tableView dequeueReusableCellWithIdentifier:@"circleCell" forIndexPath:indexPath];
-        hotCell.textLabel.text = @"Tina";
-        return hotCell;
+        if (indexPath.row == 0) {
+            
+            CircleCell * circleTitleCell = [tableView dequeueReusableCellWithIdentifier:@"CircleTitleCell" forIndexPath:indexPath];
+            circleTitleCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return circleTitleCell;
+        } else if (indexPath.row <= 1 || indexPath.row <= 4) {
+        
+            CircleContentCell * circleContentCell = [tableView dequeueReusableCellWithIdentifier:@"cContentCell" forIndexPath:indexPath];
+            circleContentCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            circleContentCell.circleImageView.image = [UIImage imageNamed:@"cityFriend"];
+            [circleContentCell dayNumberWithStr:@"12345"];
+            if (indexPath.row == 4) {
+                
+                circleContentCell.lineView.backgroundColor = [UIColor clearColor];
+            }
+            return circleContentCell;
+        } else if (indexPath.row == 5) {
+        
+            UITableViewCell * hotCell = [tableView dequeueReusableCellWithIdentifier:@"circleCell" forIndexPath:indexPath];
+            hotCell.backgroundColor = HEXCOLOR(0xf0f0f0);
+            return hotCell;
+        } else if (indexPath.row == 6) {
+        
+            CircleCell * circleTitleCell = [tableView dequeueReusableCellWithIdentifier:@"CircleTitleCell" forIndexPath:indexPath];
+            circleTitleCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            circleTitleCell.lineView.backgroundColor = [UIColor clearColor];
+            return circleTitleCell;
+        } else {
+        
+            RecCircleCell * recCell = [tableView dequeueReusableCellWithIdentifier:@"recCell" forIndexPath:indexPath];
+            return recCell;
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #pragma mark - ScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
-    if(scrollView.contentOffset.x == 0) {
-    
-        [UIView animateWithDuration:0.33 animations:^{
-            
-            _navLineView.center = CGPointMake(_hotPostBtn.center.x, 63);
-        }];
+    if (scrollView == _scrollView) {
         
-    } else if (scrollView.contentOffset.x == SCREEN_WIDTH) {
-    
-        [UIView animateWithDuration:0.33 animations:^{
+        if(scrollView.contentOffset.x == 0) {
             
-            _navLineView.center = CGPointMake(_circleBtn.center.x, 63);
-        }];
+            [UIView animateWithDuration:0.33 animations:^{
+                
+                _navLineView.center = CGPointMake(_hotPostBtn.center.x, 63);
+            }];
+            
+        } else if (scrollView.contentOffset.x == SCREEN_WIDTH) {
+            
+            [UIView animateWithDuration:0.33 animations:^{
+                
+                _navLineView.center = CGPointMake(_circleBtn.center.x, 63);
+            }];
+        }
     }
-    
 }
 
 
