@@ -10,6 +10,8 @@
 
 @interface ClassifyCell : UITableViewCell
 
+@property (nonatomic, copy)void(^classifyBlock)();
+
 //创建分类按钮
 - (void)createClassifyBtn;
 

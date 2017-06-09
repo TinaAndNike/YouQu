@@ -9,6 +9,9 @@
 #import "ClassifyCell.h"
 #import "TabBarBtn.h"
 
+
+#define btnTag 100
+
 @implementation ClassifyCell
 
 - (void)awakeFromNib {
@@ -43,7 +46,8 @@
         for (int j = 0; j < 5; j ++) {
             
             UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(rlSp + (btnWidth * j) + (btnRLSp * j), highSp + (btnWidth * i) + (btnHBSp * i), btnWidth, btnWidth)];
-            //[btn setBackgroundImage:[UIImage imageNamed:buttonImageName[index]] forState:UIControlStateNormal];
+            btn.tag = btnTag + index;
+            [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
             [btn setImage:[UIImage imageNamed:buttonImageName[index]] forState:UIControlStateNormal];
             [self.contentView addSubview:btn];
             
@@ -56,7 +60,11 @@
             index ++;
         }
     }
+}
 
+- (void)btnClick:(UIButton *)btn {
+
+    self.classifyBlock();
 }
 
 @end

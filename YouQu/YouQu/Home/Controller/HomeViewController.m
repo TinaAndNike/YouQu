@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "ProductDetailsController.h"
 #import "BannerCell.h"
 #import "ClassifyCell.h"
 #import "TimeLimitCell.h"
@@ -213,6 +214,13 @@
     
         ClassifyCell * classifyCell = [tableView dequeueReusableCellWithIdentifier:@"classifyCell" forIndexPath:indexPath];
         classifyCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        //调用block
+        classifyCell.classifyBlock = ^(){
+        
+            [self.navigationController pushViewController:[ProductDetailsController new] animated:YES];
+        };
+        
         [classifyCell createClassifyBtn];
         return classifyCell;
        

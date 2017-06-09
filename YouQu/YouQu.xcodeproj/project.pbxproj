@@ -35,6 +35,13 @@
 		96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE21EDFEF170086D941 /* BannerCell.m */; };
 		96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE51EDFEF440086D941 /* ClassifyCell.m */; };
 		96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DEB1EE025750086D941 /* TimeLimitCell.m */; };
+		96E28FC01EEA43CA00990B9C /* MineheadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E28FBE1EEA43CA00990B9C /* MineheadCell.m */; };
+		96E28FC11EEA43CA00990B9C /* MineheadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E28FBF1EEA43CA00990B9C /* MineheadCell.xib */; };
+		96E28FC51EEA49A800990B9C /* MineMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E28FC31EEA49A800990B9C /* MineMessageCell.m */; };
+		96E28FC61EEA49A800990B9C /* MineMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E28FC41EEA49A800990B9C /* MineMessageCell.xib */; };
+		96E28FCA1EEA530800990B9C /* MineFunctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E28FC81EEA530800990B9C /* MineFunctionCell.m */; };
+		96E28FCB1EEA530800990B9C /* MineFunctionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E28FC91EEA530800990B9C /* MineFunctionCell.xib */; };
+		96E28FCE1EEA89A000990B9C /* ProductDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E28FCD1EEA89A000990B9C /* ProductDetailsController.m */; };
 		96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */; };
 		96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */; };
 		96F21FA61EE8F3E800A7A46C /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F21FA41EE8F3E800A7A46C /* CircleCell.m */; };
@@ -102,6 +109,17 @@
 		96DE8DE51EDFEF440086D941 /* ClassifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassifyCell.m; sourceTree = "<group>"; };
 		96DE8DEA1EE025750086D941 /* TimeLimitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLimitCell.h; sourceTree = "<group>"; };
 		96DE8DEB1EE025750086D941 /* TimeLimitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLimitCell.m; sourceTree = "<group>"; };
+		96E28FBD1EEA43CA00990B9C /* MineheadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineheadCell.h; sourceTree = "<group>"; };
+		96E28FBE1EEA43CA00990B9C /* MineheadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineheadCell.m; sourceTree = "<group>"; };
+		96E28FBF1EEA43CA00990B9C /* MineheadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineheadCell.xib; sourceTree = "<group>"; };
+		96E28FC21EEA49A800990B9C /* MineMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMessageCell.h; sourceTree = "<group>"; };
+		96E28FC31EEA49A800990B9C /* MineMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMessageCell.m; sourceTree = "<group>"; };
+		96E28FC41EEA49A800990B9C /* MineMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineMessageCell.xib; sourceTree = "<group>"; };
+		96E28FC71EEA530800990B9C /* MineFunctionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFunctionCell.h; sourceTree = "<group>"; };
+		96E28FC81EEA530800990B9C /* MineFunctionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFunctionCell.m; sourceTree = "<group>"; };
+		96E28FC91EEA530800990B9C /* MineFunctionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineFunctionCell.xib; sourceTree = "<group>"; };
+		96E28FCC1EEA89A000990B9C /* ProductDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsController.h; sourceTree = "<group>"; };
+		96E28FCD1EEA89A000990B9C /* ProductDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsController.m; sourceTree = "<group>"; };
 		96ED4ACA1EE10D1B00FE4F64 /* LimitCommodityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitCommodityCell.h; sourceTree = "<group>"; };
 		96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitCommodityCell.m; sourceTree = "<group>"; };
 		96ED4ACD1EE11A4100FE4F64 /* LimitCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitCollCell.h; sourceTree = "<group>"; };
@@ -245,6 +263,8 @@
 			children = (
 				96895E721EDE67F5001EF130 /* HomeViewController.h */,
 				96895E731EDE67F5001EF130 /* HomeViewController.m */,
+				96E28FCC1EEA89A000990B9C /* ProductDetailsController.h */,
+				96E28FCD1EEA89A000990B9C /* ProductDetailsController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +332,15 @@
 		96895E611EDE5B49001EF130 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96E28FBD1EEA43CA00990B9C /* MineheadCell.h */,
+				96E28FBE1EEA43CA00990B9C /* MineheadCell.m */,
+				96E28FBF1EEA43CA00990B9C /* MineheadCell.xib */,
+				96E28FC21EEA49A800990B9C /* MineMessageCell.h */,
+				96E28FC31EEA49A800990B9C /* MineMessageCell.m */,
+				96E28FC41EEA49A800990B9C /* MineMessageCell.xib */,
+				96E28FC71EEA530800990B9C /* MineFunctionCell.h */,
+				96E28FC81EEA530800990B9C /* MineFunctionCell.m */,
+				96E28FC91EEA530800990B9C /* MineFunctionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,7 +508,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E28FCB1EEA530800990B9C /* MineFunctionCell.xib in Resources */,
+				96E28FC11EEA43CA00990B9C /* MineheadCell.xib in Resources */,
 				96895E4F1EDE5A9E001EF130 /* LaunchScreen.storyboard in Resources */,
+				96E28FC61EEA49A800990B9C /* MineMessageCell.xib in Resources */,
 				96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */,
 				96895E4C1EDE5A9E001EF130 /* Assets.xcassets in Resources */,
 				96895E4A1EDE5A9E001EF130 /* Main.storyboard in Resources */,
@@ -553,6 +585,7 @@
 				96895E7A1EDE682B001EF130 /* CommunityViewController.m in Sources */,
 				96895E471EDE5A9D001EF130 /* ViewController.m in Sources */,
 				96D541681EE54FD30063B2A0 /* RecommendCollCell.m in Sources */,
+				96E28FCA1EEA530800990B9C /* MineFunctionCell.m in Sources */,
 				96D5415F1EE50D7A0063B2A0 /* XMLPageControl.m in Sources */,
 				96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */,
 				96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */,
@@ -566,9 +599,12 @@
 				96895E411EDE5A9D001EF130 /* main.m in Sources */,
 				96895E701EDE63C9001EF130 /* RootViewController.m in Sources */,
 				96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */,
+				96E28FCE1EEA89A000990B9C /* ProductDetailsController.m in Sources */,
 				96895E741EDE67F5001EF130 /* HomeViewController.m in Sources */,
 				962C80C21EE92C09000734E3 /* RecCircleCell.m in Sources */,
 				96895E831EDE699F001EF130 /* TabBarView.m in Sources */,
+				96E28FC51EEA49A800990B9C /* MineMessageCell.m in Sources */,
+				96E28FC01EEA43CA00990B9C /* MineheadCell.m in Sources */,
 				96895E771EDE6810001EF130 /* ShoppingViewController.m in Sources */,
 				96F21FA61EE8F3E800A7A46C /* CircleCell.m in Sources */,
 				96F403521EE69109004355F8 /* TitleCell.m in Sources */,
