@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavSecondView">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-7V-mbS">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                    <state key="normal" title=" 人气">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="navSecondBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="IGa-qE-ler"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9s-IP-yv1">
+                    <rect key="frame" x="100" y="0.0" width="100" height="40"/>
+                    <state key="normal" title="新品">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="navSecondBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="6E6-lZ-aG6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7c-V9-Yya">
+                    <rect key="frame" x="200" y="0.0" width="100" height="40"/>
+                    <state key="normal" title="价格">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="navSecondBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zrn-Cz-UUd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEu-Kv-qNc">
+                    <rect key="frame" x="300" y="0.0" width="100" height="40"/>
+                    <state key="normal" title="筛选">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="screenBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="atU-R7-8uG"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_normal" translatesAutoresizingMaskIntoConstraints="NO" id="aO6-Bh-wSm">
+                    <rect key="frame" x="271" y="12" width="8" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8" id="RCD-vP-sBl"/>
+                        <constraint firstAttribute="height" constant="15" id="TtF-ye-l9J"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_filter_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-aG-z11">
+                    <rect key="frame" x="367.5" y="13" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="0gk-td-0K8"/>
+                        <constraint firstAttribute="width" constant="15" id="jWG-dK-lSw"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="K7c-V9-Yya" firstAttribute="leading" secondItem="v9s-IP-yv1" secondAttribute="trailing" id="1GB-na-GR0"/>
+                <constraint firstItem="OEu-Kv-qNc" firstAttribute="leading" secondItem="K7c-V9-Yya" secondAttribute="trailing" id="5UZ-FQ-pPE"/>
+                <constraint firstItem="OEu-Kv-qNc" firstAttribute="leading" secondItem="K7c-V9-Yya" secondAttribute="trailing" id="64C-9B-TeT"/>
+                <constraint firstItem="v9s-IP-yv1" firstAttribute="leading" secondItem="9j9-7V-mbS" secondAttribute="trailing" id="6Om-sk-4vz"/>
+                <constraint firstItem="9j9-7V-mbS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AEY-JM-wnv"/>
+                <constraint firstAttribute="bottom" secondItem="9j9-7V-mbS" secondAttribute="bottom" id="EXM-lK-oxe"/>
+                <constraint firstItem="aO6-Bh-wSm" firstAttribute="centerX" secondItem="K7c-V9-Yya" secondAttribute="centerX" constant="25" id="Fdg-3U-TyO"/>
+                <constraint firstAttribute="bottom" secondItem="OEu-Kv-qNc" secondAttribute="bottom" id="PeG-Dk-HfU"/>
+                <constraint firstAttribute="bottom" secondItem="K7c-V9-Yya" secondAttribute="bottom" id="Qm6-Zu-QLZ"/>
+                <constraint firstItem="OEu-Kv-qNc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UE0-GL-tVL"/>
+                <constraint firstItem="aO6-Bh-wSm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="bqL-qn-LhZ"/>
+                <constraint firstItem="K7c-V9-Yya" firstAttribute="width" secondItem="9j9-7V-mbS" secondAttribute="width" id="fGT-bh-GRt"/>
+                <constraint firstItem="OEu-Kv-qNc" firstAttribute="width" secondItem="9j9-7V-mbS" secondAttribute="width" id="ghb-Pz-gBn"/>
+                <constraint firstAttribute="trailing" secondItem="OEu-Kv-qNc" secondAttribute="trailing" id="hO6-SG-EIe"/>
+                <constraint firstItem="v9s-IP-yv1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lyL-2w-gdV"/>
+                <constraint firstItem="Fai-aG-z11" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="mDn-EE-i8I"/>
+                <constraint firstItem="v9s-IP-yv1" firstAttribute="leading" secondItem="9j9-7V-mbS" secondAttribute="trailing" id="oDJ-fY-Zuz"/>
+                <constraint firstItem="K7c-V9-Yya" firstAttribute="leading" secondItem="v9s-IP-yv1" secondAttribute="trailing" id="omc-gV-APB"/>
+                <constraint firstAttribute="bottom" secondItem="v9s-IP-yv1" secondAttribute="bottom" id="ulM-qp-YRu"/>
+                <constraint firstItem="v9s-IP-yv1" firstAttribute="width" secondItem="9j9-7V-mbS" secondAttribute="width" id="v1S-G5-yUb"/>
+                <constraint firstItem="9j9-7V-mbS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ydt-cd-aYP"/>
+                <constraint firstItem="Fai-aG-z11" firstAttribute="centerX" secondItem="OEu-Kv-qNc" secondAttribute="centerX" constant="25" id="zh0-xu-Bg8"/>
+                <constraint firstItem="K7c-V9-Yya" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zwl-5i-b6g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="popularityBtn" destination="9j9-7V-mbS" id="eiG-ZA-dCb"/>
+                <outlet property="priceBtn" destination="K7c-V9-Yya" id="2n3-Dk-5HO"/>
+                <outlet property="priceImageView" destination="aO6-Bh-wSm" id="MgH-0F-g85"/>
+                <outlet property="ptoductNew" destination="v9s-IP-yv1" id="Js9-aX-9MI"/>
+                <outlet property="screenBtn" destination="OEu-Kv-qNc" id="mS9-dd-a0x"/>
+                <outlet property="screenImageView" destination="Fai-aG-z11" id="fvP-sg-1wQ"/>
+            </connections>
+            <point key="canvasLocation" x="-43" y="-495"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="product_filter_normal" width="44" height="45"/>
+        <image name="product_normal" width="24" height="45"/>
+    </resources>
+</document>

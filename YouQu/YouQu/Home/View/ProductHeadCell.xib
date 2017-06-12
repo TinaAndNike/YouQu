@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headCell" id="gTV-IL-0wX" customClass="ProductHeadCell">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="151"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="151"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_101" translatesAutoresizingMaskIntoConstraints="NO" id="w8R-cM-HeR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="151"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="w8R-cM-HeR" secondAttribute="trailing" id="642-TH-K46"/>
+                <constraint firstAttribute="bottom" secondItem="w8R-cM-HeR" secondAttribute="bottom" id="fgd-at-kDa"/>
+                <constraint firstItem="w8R-cM-HeR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jZO-Pz-DFG"/>
+                <constraint firstItem="w8R-cM-HeR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sjd-eJ-aVm"/>
+            </constraints>
+            <size key="customSize" width="390" height="151"/>
+            <connections>
+                <outlet property="headView" destination="w8R-cM-HeR" id="HJA-eo-Qpc"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="-15.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="banner_101" width="510" height="276"/>
+    </resources>
+</document>

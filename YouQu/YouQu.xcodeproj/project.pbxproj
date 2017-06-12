@@ -46,6 +46,12 @@
 		96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */; };
 		96F21FA61EE8F3E800A7A46C /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F21FA41EE8F3E800A7A46C /* CircleCell.m */; };
 		96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F21FA51EE8F3E800A7A46C /* CircleCell.xib */; };
+		96F3FC441EEE3FE500EE0BFD /* ProductHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3FC421EEE3FE500EE0BFD /* ProductHeadCell.m */; };
+		96F3FC451EEE3FE500EE0BFD /* ProductHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3FC431EEE3FE500EE0BFD /* ProductHeadCell.xib */; };
+		96F3FC491EEE461A00EE0BFD /* ProductDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3FC471EEE461A00EE0BFD /* ProductDetailsCell.m */; };
+		96F3FC4A1EEE461A00EE0BFD /* ProductDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3FC481EEE461A00EE0BFD /* ProductDetailsCell.xib */; };
+		96F3FC531EEE88AF00EE0BFD /* NavSecondView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3FC521EEE88AF00EE0BFD /* NavSecondView.m */; };
+		96F3FC551EEE88C200EE0BFD /* NavSecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3FC541EEE88C200EE0BFD /* NavSecondView.xib */; };
 		96F403521EE69109004355F8 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F403511EE69109004355F8 /* TitleCell.m */; };
 		96F403551EE6972F004355F8 /* HotPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F403541EE6972F004355F8 /* HotPostCell.m */; };
 		96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */; };
@@ -127,6 +133,15 @@
 		96F21FA31EE8F3E800A7A46C /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
 		96F21FA41EE8F3E800A7A46C /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
 		96F21FA51EE8F3E800A7A46C /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
+		96F3FC411EEE3FE500EE0BFD /* ProductHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductHeadCell.h; sourceTree = "<group>"; };
+		96F3FC421EEE3FE500EE0BFD /* ProductHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductHeadCell.m; sourceTree = "<group>"; };
+		96F3FC431EEE3FE500EE0BFD /* ProductHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductHeadCell.xib; sourceTree = "<group>"; };
+		96F3FC461EEE461A00EE0BFD /* ProductDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsCell.h; sourceTree = "<group>"; };
+		96F3FC471EEE461A00EE0BFD /* ProductDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsCell.m; sourceTree = "<group>"; };
+		96F3FC481EEE461A00EE0BFD /* ProductDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailsCell.xib; sourceTree = "<group>"; };
+		96F3FC511EEE88AF00EE0BFD /* NavSecondView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavSecondView.h; sourceTree = "<group>"; };
+		96F3FC521EEE88AF00EE0BFD /* NavSecondView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavSecondView.m; sourceTree = "<group>"; };
+		96F3FC541EEE88C200EE0BFD /* NavSecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavSecondView.xib; sourceTree = "<group>"; };
 		96F403501EE69109004355F8 /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
 		96F403511EE69109004355F8 /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
 		96F403531EE6972F004355F8 /* HotPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPostCell.h; sourceTree = "<group>"; };
@@ -279,26 +294,8 @@
 		96895E5D1EDE5B49001EF130 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				96DE8DE11EDFEF170086D941 /* BannerCell.h */,
-				96DE8DE21EDFEF170086D941 /* BannerCell.m */,
-				96DE8DE41EDFEF440086D941 /* ClassifyCell.h */,
-				96DE8DE51EDFEF440086D941 /* ClassifyCell.m */,
-				96DE8DEA1EE025750086D941 /* TimeLimitCell.h */,
-				96DE8DEB1EE025750086D941 /* TimeLimitCell.m */,
-				96ED4ACA1EE10D1B00FE4F64 /* LimitCommodityCell.h */,
-				96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */,
-				96ED4ACD1EE11A4100FE4F64 /* LimitCollCell.h */,
-				96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */,
-				969CE97A1EE1543A001B07DF /* HotHeadCell.h */,
-				969CE97B1EE1543A001B07DF /* HotHeadCell.m */,
-				96FE7CC91EE24D5E002B2835 /* HotCollCell.h */,
-				96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */,
-				96FE7CCC1EE25E50002B2835 /* PublicCell.h */,
-				96FE7CCD1EE25E50002B2835 /* PublicCell.m */,
-				96D541631EE54D8E0063B2A0 /* RecommendCell.h */,
-				96D541641EE54D8E0063B2A0 /* RecommendCell.m */,
-				96D541661EE54FD30063B2A0 /* RecommendCollCell.h */,
-				96D541671EE54FD30063B2A0 /* RecommendCollCell.m */,
+				96F3FC401EEE3F8200EE0BFD /* ProductView */,
+				96F3FC3F1EEE3F6F00EE0BFD /* HomeView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +435,49 @@
 			path = CustomClass;
 			sourceTree = "<group>";
 		};
+		96F3FC3F1EEE3F6F00EE0BFD /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				96DE8DE11EDFEF170086D941 /* BannerCell.h */,
+				96DE8DE21EDFEF170086D941 /* BannerCell.m */,
+				96DE8DE41EDFEF440086D941 /* ClassifyCell.h */,
+				96DE8DE51EDFEF440086D941 /* ClassifyCell.m */,
+				96DE8DEA1EE025750086D941 /* TimeLimitCell.h */,
+				96DE8DEB1EE025750086D941 /* TimeLimitCell.m */,
+				96ED4ACA1EE10D1B00FE4F64 /* LimitCommodityCell.h */,
+				96ED4ACB1EE10D1B00FE4F64 /* LimitCommodityCell.m */,
+				96ED4ACD1EE11A4100FE4F64 /* LimitCollCell.h */,
+				96ED4ACE1EE11A4100FE4F64 /* LimitCollCell.m */,
+				969CE97A1EE1543A001B07DF /* HotHeadCell.h */,
+				969CE97B1EE1543A001B07DF /* HotHeadCell.m */,
+				96FE7CC91EE24D5E002B2835 /* HotCollCell.h */,
+				96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */,
+				96FE7CCC1EE25E50002B2835 /* PublicCell.h */,
+				96FE7CCD1EE25E50002B2835 /* PublicCell.m */,
+				96D541631EE54D8E0063B2A0 /* RecommendCell.h */,
+				96D541641EE54D8E0063B2A0 /* RecommendCell.m */,
+				96D541661EE54FD30063B2A0 /* RecommendCollCell.h */,
+				96D541671EE54FD30063B2A0 /* RecommendCollCell.m */,
+			);
+			name = HomeView;
+			sourceTree = "<group>";
+		};
+		96F3FC401EEE3F8200EE0BFD /* ProductView */ = {
+			isa = PBXGroup;
+			children = (
+				96F3FC411EEE3FE500EE0BFD /* ProductHeadCell.h */,
+				96F3FC421EEE3FE500EE0BFD /* ProductHeadCell.m */,
+				96F3FC431EEE3FE500EE0BFD /* ProductHeadCell.xib */,
+				96F3FC461EEE461A00EE0BFD /* ProductDetailsCell.h */,
+				96F3FC471EEE461A00EE0BFD /* ProductDetailsCell.m */,
+				96F3FC481EEE461A00EE0BFD /* ProductDetailsCell.xib */,
+				96F3FC511EEE88AF00EE0BFD /* NavSecondView.h */,
+				96F3FC521EEE88AF00EE0BFD /* NavSecondView.m */,
+				96F3FC541EEE88C200EE0BFD /* NavSecondView.xib */,
+			);
+			name = ProductView;
+			sourceTree = "<group>";
+		};
 		E8816307B990D04BAAECE99B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,12 +550,15 @@
 			files = (
 				96E28FCB1EEA530800990B9C /* MineFunctionCell.xib in Resources */,
 				96E28FC11EEA43CA00990B9C /* MineheadCell.xib in Resources */,
+				96F3FC551EEE88C200EE0BFD /* NavSecondView.xib in Resources */,
 				96895E4F1EDE5A9E001EF130 /* LaunchScreen.storyboard in Resources */,
 				96E28FC61EEA49A800990B9C /* MineMessageCell.xib in Resources */,
 				96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */,
 				96895E4C1EDE5A9E001EF130 /* Assets.xcassets in Resources */,
 				96895E4A1EDE5A9E001EF130 /* Main.storyboard in Resources */,
+				96F3FC451EEE3FE500EE0BFD /* ProductHeadCell.xib in Resources */,
 				962C80C31EE92C09000734E3 /* RecCircleCell.xib in Resources */,
+				96F3FC4A1EEE461A00EE0BFD /* ProductDetailsCell.xib in Resources */,
 				962C80BE1EE8FBE0000734E3 /* CircleContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,12 +633,15 @@
 				96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */,
 				96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */,
 				96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */,
+				96F3FC441EEE3FE500EE0BFD /* ProductHeadCell.m in Sources */,
 				96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */,
 				96D541651EE54D8E0063B2A0 /* RecommendCell.m in Sources */,
 				969CE97C1EE1543A001B07DF /* HotHeadCell.m in Sources */,
 				96895E6C1EDE60DA001EF130 /* RootTabBarController.m in Sources */,
+				96F3FC531EEE88AF00EE0BFD /* NavSecondView.m in Sources */,
 				96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */,
 				96895E441EDE5A9D001EF130 /* AppDelegate.m in Sources */,
+				96F3FC491EEE461A00EE0BFD /* ProductDetailsCell.m in Sources */,
 				96895E411EDE5A9D001EF130 /* main.m in Sources */,
 				96895E701EDE63C9001EF130 /* RootViewController.m in Sources */,
 				96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */,
