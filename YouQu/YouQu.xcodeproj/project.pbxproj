@@ -11,6 +11,9 @@
 		962C80BE1EE8FBE0000734E3 /* CircleContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962C80BC1EE8FBE0000734E3 /* CircleContentCell.xib */; };
 		962C80C21EE92C09000734E3 /* RecCircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C80C01EE92C09000734E3 /* RecCircleCell.m */; };
 		962C80C31EE92C09000734E3 /* RecCircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962C80C11EE92C09000734E3 /* RecCircleCell.xib */; };
+		96453D771EEF792200C08BDC /* ScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96453D761EEF792200C08BDC /* ScreenView.m */; };
+		96453D791EEF793800C08BDC /* ScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96453D781EEF793800C08BDC /* ScreenView.xib */; };
+		96453D7C1EEFC7E800C08BDC /* RootDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96453D7B1EEFC7E800C08BDC /* RootDetailsController.m */; };
 		96895E411EDE5A9D001EF130 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E401EDE5A9D001EF130 /* main.m */; };
 		96895E441EDE5A9D001EF130 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E431EDE5A9D001EF130 /* AppDelegate.m */; };
 		96895E471EDE5A9D001EF130 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E461EDE5A9D001EF130 /* ViewController.m */; };
@@ -68,6 +71,11 @@
 		962C80BF1EE92C09000734E3 /* RecCircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecCircleCell.h; sourceTree = "<group>"; };
 		962C80C01EE92C09000734E3 /* RecCircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecCircleCell.m; sourceTree = "<group>"; };
 		962C80C11EE92C09000734E3 /* RecCircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecCircleCell.xib; sourceTree = "<group>"; };
+		96453D751EEF792200C08BDC /* ScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenView.h; sourceTree = "<group>"; };
+		96453D761EEF792200C08BDC /* ScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenView.m; sourceTree = "<group>"; };
+		96453D781EEF793800C08BDC /* ScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenView.xib; sourceTree = "<group>"; };
+		96453D7A1EEFC7E800C08BDC /* RootDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootDetailsController.h; sourceTree = "<group>"; };
+		96453D7B1EEFC7E800C08BDC /* RootDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootDetailsController.m; sourceTree = "<group>"; };
 		96895E3C1EDE5A9D001EF130 /* YouQu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouQu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96895E401EDE5A9D001EF130 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96895E421EDE5A9D001EF130 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -420,6 +428,8 @@
 				96895E6F1EDE63C9001EF130 /* RootViewController.m */,
 				96895E7E1EDE68D1001EF130 /* RootNavController.h */,
 				96895E7F1EDE68D1001EF130 /* RootNavController.m */,
+				96453D7A1EEFC7E800C08BDC /* RootDetailsController.h */,
+				96453D7B1EEFC7E800C08BDC /* RootDetailsController.m */,
 			);
 			path = RootController;
 			sourceTree = "<group>";
@@ -474,6 +484,9 @@
 				96F3FC511EEE88AF00EE0BFD /* NavSecondView.h */,
 				96F3FC521EEE88AF00EE0BFD /* NavSecondView.m */,
 				96F3FC541EEE88C200EE0BFD /* NavSecondView.xib */,
+				96453D751EEF792200C08BDC /* ScreenView.h */,
+				96453D761EEF792200C08BDC /* ScreenView.m */,
+				96453D781EEF793800C08BDC /* ScreenView.xib */,
 			);
 			name = ProductView;
 			sourceTree = "<group>";
@@ -554,6 +567,7 @@
 				96895E4F1EDE5A9E001EF130 /* LaunchScreen.storyboard in Resources */,
 				96E28FC61EEA49A800990B9C /* MineMessageCell.xib in Resources */,
 				96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */,
+				96453D791EEF793800C08BDC /* ScreenView.xib in Resources */,
 				96895E4C1EDE5A9E001EF130 /* Assets.xcassets in Resources */,
 				96895E4A1EDE5A9E001EF130 /* Main.storyboard in Resources */,
 				96F3FC451EEE3FE500EE0BFD /* ProductHeadCell.xib in Resources */,
@@ -620,6 +634,7 @@
 			files = (
 				96F403551EE6972F004355F8 /* HotPostCell.m in Sources */,
 				96FE7CCE1EE25E50002B2835 /* PublicCell.m in Sources */,
+				96453D771EEF792200C08BDC /* ScreenView.m in Sources */,
 				9693797C1EDE74E90057AA43 /* Tool.m in Sources */,
 				969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */,
 				96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */,
@@ -647,6 +662,7 @@
 				96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */,
 				96E28FCE1EEA89A000990B9C /* ProductDetailsController.m in Sources */,
 				96895E741EDE67F5001EF130 /* HomeViewController.m in Sources */,
+				96453D7C1EEFC7E800C08BDC /* RootDetailsController.m in Sources */,
 				962C80C21EE92C09000734E3 /* RecCircleCell.m in Sources */,
 				96895E831EDE699F001EF130 /* TabBarView.m in Sources */,
 				96E28FC51EEA49A800990B9C /* MineMessageCell.m in Sources */,

@@ -16,6 +16,12 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *ptoductNew;
 
+//筛选Block
+@property (nonatomic, copy)void(^screenBtnBlock)();
+
 + (NavSecondView *)initNavSecondView;
+
+//screenBtn取消事件
+- (void)cancleScreenBtn;
 
 @end

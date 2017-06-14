@@ -7,6 +7,7 @@
 //
 
 #import "ShoppingViewController.h"
+#import "ScreenView.h"
 
 @interface ShoppingViewController ()
 
@@ -19,12 +20,13 @@
     self.view.backgroundColor = RANDOM_COLOR;
     self.title = @"购物车";
     
-    NSLog(@"------%d",1%5);
+    [self functwo];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+
 }
 
 /*
@@ -36,5 +38,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)functwo {
+
+    ScreenView * screenView = [ScreenView initScreenView];
+    screenView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 49);
+    [self.view addSubview:screenView];
+    
+    [screenView createContent];
+}
+
+- (void)funcOne {
+
+    UIScrollView * scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    scrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT * 3);
+    scrollView.scrollEnabled = YES;
+    scrollView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:scrollView];
+    
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(50, 0, 50, SCREEN_HEIGHT * 2)];
+    view.backgroundColor = [UIColor cyanColor];
+    [scrollView addSubview:view];
+}
 
 @end

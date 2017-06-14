@@ -1,21 +1,21 @@
 //
-//  RootViewController.m
+//  RootDetailsController.m
 //  YouQu
 //
-//  Created by 夏梦雷 on 17/5/31.
+//  Created by 夏梦雷 on 17/6/13.
 //  Copyright © 2017年 夏梦雷. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "RootDetailsController.h"
 
-@interface RootViewController ()
+@interface RootDetailsController ()
 
 //创建一个全局tabBar的属性用来调用封装的隐藏tabBar的方法
 @property (nonatomic, strong)RootTabBarController * rootBar;
 
 @end
 
-@implementation RootViewController
+@implementation RootDetailsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,12 +28,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidAppear:(BOOL)animated {
 
-    [super viewDidAppear:animated];
-    [_rootBar settabbarHidden:NO];
+- (void)viewWillAppear:(BOOL)animated {
+
+    [super viewWillAppear:animated];
+    [_rootBar settabbarHidden:YES];
 }
-
 /*
 #pragma mark - Navigation
 

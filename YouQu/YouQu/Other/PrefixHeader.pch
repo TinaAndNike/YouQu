@@ -9,6 +9,7 @@
 
 #import "Tool.h"
 #import "XMLBannerScrollView.h"
+#import "RootTabBarController.h"
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch

@@ -75,6 +75,15 @@ static bool isPriceImage;
     
     sender.selected = YES;
     _screenImageView.image = [UIImage imageNamed:@"product_filter_select"];
+    
+    //调用screenBlock
+    self.screenBtnBlock();
+}
+
+- (void)cancleScreenBtn {
+    
+    _screenBtn.selected = NO;
+    _screenImageView.image = [UIImage imageNamed:@"product_filter_normal"];
 }
 
 

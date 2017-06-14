@@ -53,6 +53,10 @@
         btn.tag = i;
         btn.frame = CGRectMake(i * (self.frame.size.width / count), 0, self.frame.size.width / count, self.frame.size.height);
         
+        UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, btn.frame.size.width, 0.5)];
+        lineView.backgroundColor = [UIColor grayColor];
+        [btn addSubview:lineView];
+        
     }
 }
     

@@ -9,6 +9,8 @@
 #import "RootTabBarController.h"
 #import "RootNavController.h"
 #import "TabBarView.h"
+#define CUSTOM_TABBAR 1
+
 
 @interface RootTabBarController ()<TabBarViewDelegate>
     
@@ -43,6 +45,9 @@
     
     //删除原有tabBar视图上的item
     CGRect rect = self.tabBar.frame;
+    
+    NSLog(@"this is hight---%f",rect.size.height);
+    
     [self.tabBar removeFromSuperview];
     
     //添加自己的视图
@@ -67,6 +72,29 @@
 - (void)tabBarView:(TabBarView *)tabBarView selectedFrom:(NSInteger)from To:(NSInteger)to {
     
     self.selectedIndex = to;
+}
+
+//隐藏自定制tabbar的方法
+- (void)settabbarHidden:(BOOL)isHidden {
+    
+    if (CUSTOM_TABBAR == NO) {
+        
+        return;
+    }
+    if (isHidden) {
+        
+        [UIView animateWithDuration:0.33 animations:^{
+            
+            self.tabBarView.frame = CGRectMake(0, SCREEN_HEIGHT, self.tabBar.frame.size.width, self.tabBar.frame.size.height);
+        }];
+        
+    }else {
+        
+        [UIView animateWithDuration:0.33 animations:^{
+            
+            self.tabBarView.frame = CGRectMake(0, SCREEN_HEIGHT - self.tabBar.frame.size.height, self.tabBar.frame.size.width, self.tabBar.frame.size.height);
+        }];
+    }
 }
 
 @end

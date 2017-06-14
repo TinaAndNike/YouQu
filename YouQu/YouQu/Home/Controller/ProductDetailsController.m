@@ -7,11 +7,16 @@
 //
 
 #import "ProductDetailsController.h"
+#import "RootTabBarController.h"
 #import "ProductHeadCell.h"
 #import "ProductDetailsCell.h"
 #import "NavSecondView.h"
+#import "ScreenView.h"
 
 @interface ProductDetailsController ()<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>
+
+//创建一个全局tabBar的属性用来调用封装的隐藏tabBar的方法
+@property (nonatomic, strong)RootTabBarController * rootBar;
 
 //头视图
 @property (nonatomic, strong)UIView * topView;
@@ -25,6 +30,10 @@
 
 @property (nonatomic, strong)UIView * secondNavView;
 
+//筛选视图
+@property (nonatomic, strong)ScreenView * screenView;
+//遮盖图片
+@property (nonatomic, strong)UIButton * maskView;
 
 
 @end
@@ -36,11 +45,13 @@ static BOOL _isPoping;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _rootBar = (id)self.tabBarController;
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"套套天堂";
     [self buildeCollectionView];
     [self configNavigation];
+    [self buildeMaskImageViewAndScreenView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +75,41 @@ static BOOL _isPoping;
     [self.view addSubview:_collectionView];
 }
 
+//筛选遮盖视图
+- (void)buildeMaskImageViewAndScreenView {
+
+    _maskView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    _maskView.alpha = 0;
+    [_maskView addTarget:self action:@selector(maskViewClick:) forControlEvents:UIControlEventTouchUpInside];
+    _maskView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:_maskView];
+    
+    
+    //创建筛选视图
+    _screenView = [ScreenView initScreenView];
+    _screenView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT * 0.7);
+    [_screenView createContent];
+    //取消block
+    //调用screenBlock
+    __weak ProductDetailsController * weakSelf = self;
+    _screenView.screenBlock = ^(){
+    
+        [weakSelf maskViewClick:nil];
+    };
+    [self.view addSubview:_screenView];
+
+}
+//遮盖视图点击事件
+- (void)maskViewClick:(UIButton *)btn {
+
+    [UIView animateWithDuration:0.33 animations:^{
+       
+        _screenView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT * 0.7);
+        _maskView.alpha = 0;
+    }];
+    [_secondView cancleScreenBtn];
+}
+
 #pragma mark - 侧滑恢复
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
     if (!_isPoping) {
@@ -83,6 +129,7 @@ static BOOL _isPoping;
     }
     
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [_rootBar settabbarHidden:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -90,7 +137,6 @@ static BOOL _isPoping;
     [super viewDidAppear:animated];
     //在didAppear时置为NO
     _isPoping = NO;
-    
 }
 #pragma mark - 返回按钮时间
 - (void)configNavigation {
@@ -119,8 +165,28 @@ static BOOL _isPoping;
     _secondView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 40);
     _secondView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_secondView];
+    
+    //调用screenBlock
+    __weak ProductDetailsController * weakSelf = self;
+    _secondView.screenBtnBlock = ^(){
+    
+        [weakSelf screenViewDisplay];
+    };
 }
 
+- (void)screenViewDisplay {
+    
+    //显示遮盖视图
+    [UIView animateWithDuration:0.33 animations:^{
+        
+        _maskView.alpha = 0.5;
+        _screenView.frame = CGRectMake(0, SCREEN_HEIGHT * 0.3, SCREEN_WIDTH, SCREEN_HEIGHT * 0.7);
+    }];
+    
+    NSLog(@"筛选视图的显示");
+}
+
+//返回上页事件
 - (void)buttonItemBack:(UIButton *)btn {
 
     [self.navigationController popViewControllerAnimated:YES];
@@ -135,7 +201,7 @@ static BOOL _isPoping;
            
             _topView.frame = CGRectMake(0, -64, SCREEN_WIDTH, 64);
             _secondView.frame = CGRectMake(0, -104, SCREEN_WIDTH, 40);
-            _collectionView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 44);
+            _collectionView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         }];
     } else {
     
@@ -182,10 +248,10 @@ static BOOL _isPoping;
 
     if (indexPath.section == 0) {
         
-        return CGSizeMake(SCREEN_WIDTH, 150);
+        return CGSizeMake(SCREEN_WIDTH, 150 * SPHEIGHT);
     } else {
     
-        return CGSizeMake((SCREEN_WIDTH - 20) / 2, 232);
+        return CGSizeMake((SCREEN_WIDTH - 20) / 2, 270 * SPHEIGHT);
     }
 }
 #pragma mark - 复用代理

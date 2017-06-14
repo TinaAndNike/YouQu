@@ -10,4 +10,7 @@
 
 @interface RootTabBarController : UITabBarController
 
+//隐藏自定制tabbar的方法
+- (void)settabbarHidden:(BOOL)isHidden;
+
 @end
