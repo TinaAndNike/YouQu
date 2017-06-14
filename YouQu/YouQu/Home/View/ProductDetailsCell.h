@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ProductDetailsCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageLayoutW;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageLayoutH;
 
 @end

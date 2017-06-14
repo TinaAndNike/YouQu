@@ -62,6 +62,8 @@ static BOOL _isPoping;
 - (void)buildeCollectionView {
 
     UICollectionViewFlowLayout* layout=[[UICollectionViewFlowLayout alloc]init];
+    layout.minimumLineSpacing = 7 * SPWIDTH;
+    layout.minimumInteritemSpacing = 0;
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 104, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
     _collectionView.delegate = self;
@@ -239,7 +241,7 @@ static BOOL _isPoping;
         return UIEdgeInsetsMake(0, 0, 0, 0);
     } else {
     
-        return UIEdgeInsetsMake(5, 5, 5, 5);
+        return UIEdgeInsetsMake(0, 0, 0, 0);
     }
 }
 
@@ -248,10 +250,10 @@ static BOOL _isPoping;
 
     if (indexPath.section == 0) {
         
-        return CGSizeMake(SCREEN_WIDTH, 150 * SPHEIGHT);
+        return CGSizeMake(SCREEN_WIDTH, 155 * SPHEIGHT);
     } else {
     
-        return CGSizeMake((SCREEN_WIDTH - 20) / 2, 270 * SPHEIGHT);
+        return CGSizeMake((SCREEN_WIDTH - 7  * SPWIDTH) / 2, (SCREEN_WIDTH - 7  * SPWIDTH) / 2 + 70);
     }
 }
 #pragma mark - 复用代理
@@ -265,6 +267,8 @@ static BOOL _isPoping;
     
         ProductDetailsCell * detailsCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"productDetailsCell" forIndexPath:indexPath];
         detailsCell.backgroundColor = [UIColor whiteColor];
+        detailsCell.imageLayoutW.constant = (SCREEN_WIDTH - 7  * SPWIDTH) / 2;
+        detailsCell.imageLayoutH.constant = (SCREEN_WIDTH - 7  * SPWIDTH) / 2;
         return detailsCell;
     }
 }

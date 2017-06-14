@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_101" translatesAutoresizingMaskIntoConstraints="NO" id="w8R-cM-HeR">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="151"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="146"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="w8R-cM-HeR" secondAttribute="trailing" id="642-TH-K46"/>
-                <constraint firstAttribute="bottom" secondItem="w8R-cM-HeR" secondAttribute="bottom" id="fgd-at-kDa"/>
+                <constraint firstAttribute="bottom" secondItem="w8R-cM-HeR" secondAttribute="bottom" constant="5" id="fgd-at-kDa"/>
                 <constraint firstItem="w8R-cM-HeR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jZO-Pz-DFG"/>
                 <constraint firstItem="w8R-cM-HeR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sjd-eJ-aVm"/>
             </constraints>

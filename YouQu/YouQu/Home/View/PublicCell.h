@@ -10,6 +10,9 @@
 
 @interface PublicCell : UITableViewCell <CCCycleScrollViewClickActionDeleage>
 
+//跳转block
+@property (nonatomic, copy)void(^jumpBlock)();
+
 @property (nonatomic, strong)UIView * headView;
 
 @property (nonatomic, strong)UILabel * headLabel;

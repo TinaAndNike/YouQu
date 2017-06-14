@@ -15,6 +15,8 @@
 #import "HotHeadCell.h"
 #import "PublicCell.h"
 #import "RecommendCell.h"
+#import "DetailsTwoController.h"
+#import "LimitDetailsController.h"
 
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -235,6 +237,11 @@
     
         LimitCommodityCell * commodityCell = [tableView dequeueReusableCellWithIdentifier:@"commodityCell" forIndexPath:indexPath];
         commodityCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        //block跳转
+        commodityCell.jumpBlock = ^(){
+        
+            [self.navigationController pushViewController:[LimitDetailsController new] animated:YES];
+        };
         return commodityCell;
         
     } else if (indexPath.row == 4){
@@ -246,6 +253,10 @@
     } else if (indexPath.row == 5) {
     
         PublicCell * publicCell = [tableView dequeueReusableCellWithIdentifier:@"publicCell" forIndexPath:indexPath];
+        publicCell.jumpBlock = ^(){
+        
+            [self.navigationController pushViewController:[DetailsTwoController new] animated:YES];
+        };
         publicCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicCell initConfigHeadViewWithHeadText:@"套套天堂" detailsText:@"/taotaotaintang"];
@@ -266,6 +277,10 @@
     } else if (indexPath.row == 7) {
     
         PublicCell * publicNanToyCell = [tableView dequeueReusableCellWithIdentifier:@"publicCell" forIndexPath:indexPath];
+        publicNanToyCell.jumpBlock = ^(){
+            
+            [self.navigationController pushViewController:[DetailsTwoController new] animated:YES];
+        };
         publicNanToyCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicNanToyCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicNanToyCell initConfigHeadViewWithHeadText:@"男用玩具" detailsText:@"/nanyongwanju"];
@@ -277,6 +292,10 @@
     } else if (indexPath.row == 8) {
     
         PublicCell * publicNavToyCell = [tableView dequeueReusableCellWithIdentifier:@"publicCell" forIndexPath:indexPath];
+        publicNavToyCell.jumpBlock = ^(){
+            
+            [self.navigationController pushViewController:[DetailsTwoController new] animated:YES];
+        };
         publicNavToyCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicNavToyCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicNavToyCell initConfigHeadViewWithHeadText:@"女用玩具" detailsText:@"/nvyongwanju"];

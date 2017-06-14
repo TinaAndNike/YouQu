@@ -14,6 +14,14 @@
 		96453D771EEF792200C08BDC /* ScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96453D761EEF792200C08BDC /* ScreenView.m */; };
 		96453D791EEF793800C08BDC /* ScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96453D781EEF793800C08BDC /* ScreenView.xib */; };
 		96453D7C1EEFC7E800C08BDC /* RootDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96453D7B1EEFC7E800C08BDC /* RootDetailsController.m */; };
+		96868A231EF0D3BF00D02976 /* DetailsTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96868A221EF0D3BF00D02976 /* DetailsTwoController.m */; };
+		96868A271EF0E0FA00D02976 /* TestCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96868A251EF0E0FA00D02976 /* TestCollCell.m */; };
+		96868A281EF0E0FA00D02976 /* TestCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96868A261EF0E0FA00D02976 /* TestCollCell.xib */; };
+		96868A2B1EF11A9100D02976 /* LimitDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96868A2A1EF11A9100D02976 /* LimitDetailsController.m */; };
+		96868A2F1EF11E5600D02976 /* LimitDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96868A2D1EF11E5600D02976 /* LimitDetailsCell.m */; };
+		96868A301EF11E5600D02976 /* LimitDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96868A2E1EF11E5600D02976 /* LimitDetailsCell.xib */; };
+		96868A341EF138DC00D02976 /* TimeLimitHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96868A321EF138DC00D02976 /* TimeLimitHeadCell.m */; };
+		96868A351EF138DC00D02976 /* TimeLimitHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96868A331EF138DC00D02976 /* TimeLimitHeadCell.xib */; };
 		96895E411EDE5A9D001EF130 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E401EDE5A9D001EF130 /* main.m */; };
 		96895E441EDE5A9D001EF130 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E431EDE5A9D001EF130 /* AppDelegate.m */; };
 		96895E471EDE5A9D001EF130 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E461EDE5A9D001EF130 /* ViewController.m */; };
@@ -76,6 +84,19 @@
 		96453D781EEF793800C08BDC /* ScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScreenView.xib; sourceTree = "<group>"; };
 		96453D7A1EEFC7E800C08BDC /* RootDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootDetailsController.h; sourceTree = "<group>"; };
 		96453D7B1EEFC7E800C08BDC /* RootDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootDetailsController.m; sourceTree = "<group>"; };
+		96868A211EF0D3BF00D02976 /* DetailsTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTwoController.h; sourceTree = "<group>"; };
+		96868A221EF0D3BF00D02976 /* DetailsTwoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTwoController.m; sourceTree = "<group>"; };
+		96868A241EF0E0FA00D02976 /* TestCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCollCell.h; sourceTree = "<group>"; };
+		96868A251EF0E0FA00D02976 /* TestCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCollCell.m; sourceTree = "<group>"; };
+		96868A261EF0E0FA00D02976 /* TestCollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCollCell.xib; sourceTree = "<group>"; };
+		96868A291EF11A9100D02976 /* LimitDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitDetailsController.h; sourceTree = "<group>"; };
+		96868A2A1EF11A9100D02976 /* LimitDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitDetailsController.m; sourceTree = "<group>"; };
+		96868A2C1EF11E5600D02976 /* LimitDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitDetailsCell.h; sourceTree = "<group>"; };
+		96868A2D1EF11E5600D02976 /* LimitDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitDetailsCell.m; sourceTree = "<group>"; };
+		96868A2E1EF11E5600D02976 /* LimitDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LimitDetailsCell.xib; sourceTree = "<group>"; };
+		96868A311EF138DC00D02976 /* TimeLimitHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLimitHeadCell.h; sourceTree = "<group>"; };
+		96868A321EF138DC00D02976 /* TimeLimitHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLimitHeadCell.m; sourceTree = "<group>"; };
+		96868A331EF138DC00D02976 /* TimeLimitHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLimitHeadCell.xib; sourceTree = "<group>"; };
 		96895E3C1EDE5A9D001EF130 /* YouQu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouQu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96895E401EDE5A9D001EF130 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96895E421EDE5A9D001EF130 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -288,6 +309,10 @@
 				96895E731EDE67F5001EF130 /* HomeViewController.m */,
 				96E28FCC1EEA89A000990B9C /* ProductDetailsController.h */,
 				96E28FCD1EEA89A000990B9C /* ProductDetailsController.m */,
+				96868A211EF0D3BF00D02976 /* DetailsTwoController.h */,
+				96868A221EF0D3BF00D02976 /* DetailsTwoController.m */,
+				96868A291EF11A9100D02976 /* LimitDetailsController.h */,
+				96868A2A1EF11A9100D02976 /* LimitDetailsController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -487,6 +512,15 @@
 				96453D751EEF792200C08BDC /* ScreenView.h */,
 				96453D761EEF792200C08BDC /* ScreenView.m */,
 				96453D781EEF793800C08BDC /* ScreenView.xib */,
+				96868A241EF0E0FA00D02976 /* TestCollCell.h */,
+				96868A251EF0E0FA00D02976 /* TestCollCell.m */,
+				96868A261EF0E0FA00D02976 /* TestCollCell.xib */,
+				96868A2C1EF11E5600D02976 /* LimitDetailsCell.h */,
+				96868A2D1EF11E5600D02976 /* LimitDetailsCell.m */,
+				96868A2E1EF11E5600D02976 /* LimitDetailsCell.xib */,
+				96868A311EF138DC00D02976 /* TimeLimitHeadCell.h */,
+				96868A321EF138DC00D02976 /* TimeLimitHeadCell.m */,
+				96868A331EF138DC00D02976 /* TimeLimitHeadCell.xib */,
 			);
 			name = ProductView;
 			sourceTree = "<group>";
@@ -565,11 +599,14 @@
 				96E28FC11EEA43CA00990B9C /* MineheadCell.xib in Resources */,
 				96F3FC551EEE88C200EE0BFD /* NavSecondView.xib in Resources */,
 				96895E4F1EDE5A9E001EF130 /* LaunchScreen.storyboard in Resources */,
+				96868A301EF11E5600D02976 /* LimitDetailsCell.xib in Resources */,
 				96E28FC61EEA49A800990B9C /* MineMessageCell.xib in Resources */,
+				96868A351EF138DC00D02976 /* TimeLimitHeadCell.xib in Resources */,
 				96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */,
 				96453D791EEF793800C08BDC /* ScreenView.xib in Resources */,
 				96895E4C1EDE5A9E001EF130 /* Assets.xcassets in Resources */,
 				96895E4A1EDE5A9E001EF130 /* Main.storyboard in Resources */,
+				96868A281EF0E0FA00D02976 /* TestCollCell.xib in Resources */,
 				96F3FC451EEE3FE500EE0BFD /* ProductHeadCell.xib in Resources */,
 				962C80C31EE92C09000734E3 /* RecCircleCell.xib in Resources */,
 				96F3FC4A1EEE461A00EE0BFD /* ProductDetailsCell.xib in Resources */,
@@ -634,6 +671,7 @@
 			files = (
 				96F403551EE6972F004355F8 /* HotPostCell.m in Sources */,
 				96FE7CCE1EE25E50002B2835 /* PublicCell.m in Sources */,
+				96868A2F1EF11E5600D02976 /* LimitDetailsCell.m in Sources */,
 				96453D771EEF792200C08BDC /* ScreenView.m in Sources */,
 				9693797C1EDE74E90057AA43 /* Tool.m in Sources */,
 				969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */,
@@ -644,6 +682,7 @@
 				96895E471EDE5A9D001EF130 /* ViewController.m in Sources */,
 				96D541681EE54FD30063B2A0 /* RecommendCollCell.m in Sources */,
 				96E28FCA1EEA530800990B9C /* MineFunctionCell.m in Sources */,
+				96868A2B1EF11A9100D02976 /* LimitDetailsController.m in Sources */,
 				96D5415F1EE50D7A0063B2A0 /* XMLPageControl.m in Sources */,
 				96ED4ACF1EE11A4100FE4F64 /* LimitCollCell.m in Sources */,
 				96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */,
@@ -667,8 +706,11 @@
 				96895E831EDE699F001EF130 /* TabBarView.m in Sources */,
 				96E28FC51EEA49A800990B9C /* MineMessageCell.m in Sources */,
 				96E28FC01EEA43CA00990B9C /* MineheadCell.m in Sources */,
+				96868A271EF0E0FA00D02976 /* TestCollCell.m in Sources */,
+				96868A341EF138DC00D02976 /* TimeLimitHeadCell.m in Sources */,
 				96895E771EDE6810001EF130 /* ShoppingViewController.m in Sources */,
 				96F21FA61EE8F3E800A7A46C /* CircleCell.m in Sources */,
+				96868A231EF0D3BF00D02976 /* DetailsTwoController.m in Sources */,
 				96F403521EE69109004355F8 /* TitleCell.m in Sources */,
 				96895E801EDE68D1001EF130 /* RootNavController.m in Sources */,
 			);

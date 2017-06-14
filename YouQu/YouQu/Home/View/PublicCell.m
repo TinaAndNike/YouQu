@@ -103,7 +103,8 @@
 }
 
 - (void)viewTapGes:(UITapGestureRecognizer *)tap {
-
+    
+    self.jumpBlock();
     NSLog(@"我被点击了");
 }
 

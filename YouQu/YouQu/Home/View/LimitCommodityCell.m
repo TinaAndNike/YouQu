@@ -73,5 +73,12 @@
     return CGSizeMake(100 * SPWIDTH, 135 * SPHEIGHT);
 }
 
+#pragma mark - 点击coll
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    //实现跳转Block
+    self.jumpBlock();
+    NSLog(@"我被点击了");
+}
 
 @end

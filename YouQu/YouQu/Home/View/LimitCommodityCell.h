@@ -10,4 +10,6 @@
 
 @interface LimitCommodityCell : UITableViewCell
 
+@property (nonatomic, copy)void(^jumpBlock)();
+
 @end
