@@ -73,7 +73,7 @@
 
     HotCollCell * hotCollCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"hotCollCell" forIndexPath:indexPath];
     hotCollCell.backgroundColor = [UIColor whiteColor];
-    hotCollCell.imageView.image = [UIImage imageNamed:@"IMG_0673.JPG"];
+    hotCollCell.imageView.image = [UIImage imageNamed:@"meinv_02"];
     hotCollCell.titleLabel.text = @"大牌入驻";
     hotCollCell.detailsLabel.text = @"英国杜蕾斯强势入驻";
     return hotCollCell;

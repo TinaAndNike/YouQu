@@ -1,22 +1,20 @@
 //
-//  recommendCell.m
+//  ShoppingRecCell.m
 //  YouQu
 //
-//  Created by 夏梦雷 on 17/6/5.
+//  Created by 夏梦雷 on 17/6/15.
 //  Copyright © 2017年 夏梦雷. All rights reserved.
 //
 
-#import "RecommendCell.h"
-#import "RecommendCollCell.h"
+#import "ShoppingRecCell.h"
 
-
-@interface RecommendCell()<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ShoppingRecCell()<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic, strong)UICollectionView * collectionView;
 
-@end
 
-@implementation RecommendCell
+@end
+@implementation ShoppingRecCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -55,14 +53,14 @@
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     _collectionView.showsVerticalScrollIndicator = NO;
-    [_collectionView registerClass:[RecommendCollCell class] forCellWithReuseIdentifier:@"recommendCollCell"];
+    [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collCell"];
     [self.contentView addSubview:_collectionView];
 }
 
 #pragma mark - CollectionViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 4;
+    return 6;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -72,17 +70,15 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake((SCREEN_WIDTH - ((16 * SPWIDTH) * 3)) / 2, 212 * SPHEIGHT);
+    return CGSizeMake((SCREEN_WIDTH - ((16 * SPWIDTH) * 3)) / 2, (SCREEN_WIDTH - ((16 * SPWIDTH) * 3)) / 2 + 60);
 }
-
 
 #pragma mark - 复用collCell
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    RecommendCollCell * recommendCollCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recommendCollCell" forIndexPath:indexPath];
-    recommendCollCell.backgroundColor = [UIColor whiteColor];
-    [recommendCollCell initRecommendWithImageView:[UIImage imageNamed:@"meinv_02"] titleText:@"山寨苹果手机只要" deatilsText:@"山寨苹果手机只要山寨苹果手机只要山寨苹果手机只要￥999"];
-    return recommendCollCell;
+    UICollectionViewCell * collCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collCell" forIndexPath:indexPath];
+    collCell.backgroundColor = [UIColor orangeColor];
+    return collCell;
 }
 
 @end

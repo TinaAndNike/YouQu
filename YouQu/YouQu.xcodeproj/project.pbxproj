@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960025041EF229E400247FD1 /* ShoppingRecCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960025031EF229E400247FD1 /* ShoppingRecCell.m */; };
+		960025081EF22FE200247FD1 /* ShoppingRecCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960025061EF22FE200247FD1 /* ShoppingRecCollCell.m */; };
+		960025091EF22FE200247FD1 /* ShoppingRecCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960025071EF22FE200247FD1 /* ShoppingRecCollCell.xib */; };
+		9600250C1EF2617700247FD1 /* CommodityCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600250B1EF2617700247FD1 /* CommodityCollCell.m */; };
 		962C80BD1EE8FBE0000734E3 /* CircleContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C80BB1EE8FBE0000734E3 /* CircleContentCell.m */; };
 		962C80BE1EE8FBE0000734E3 /* CircleContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962C80BC1EE8FBE0000734E3 /* CircleContentCell.xib */; };
 		962C80C21EE92C09000734E3 /* RecCircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C80C01EE92C09000734E3 /* RecCircleCell.m */; };
@@ -73,6 +77,13 @@
 /* Begin PBXFileReference section */
 		24AD4F3DCDE7AC5C87636A04 /* Pods-YouQu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouQu.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouQu/Pods-YouQu.release.xcconfig"; sourceTree = "<group>"; };
 		6061BE328E0227450853C107 /* Pods-YouQu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouQu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouQu/Pods-YouQu.debug.xcconfig"; sourceTree = "<group>"; };
+		960025021EF229E400247FD1 /* ShoppingRecCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingRecCell.h; sourceTree = "<group>"; };
+		960025031EF229E400247FD1 /* ShoppingRecCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingRecCell.m; sourceTree = "<group>"; };
+		960025051EF22FE200247FD1 /* ShoppingRecCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingRecCollCell.h; sourceTree = "<group>"; };
+		960025061EF22FE200247FD1 /* ShoppingRecCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingRecCollCell.m; sourceTree = "<group>"; };
+		960025071EF22FE200247FD1 /* ShoppingRecCollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingRecCollCell.xib; sourceTree = "<group>"; };
+		9600250A1EF2617700247FD1 /* CommodityCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityCollCell.h; sourceTree = "<group>"; };
+		9600250B1EF2617700247FD1 /* CommodityCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityCollCell.m; sourceTree = "<group>"; };
 		962C80BA1EE8FBE0000734E3 /* CircleContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleContentCell.h; sourceTree = "<group>"; };
 		962C80BB1EE8FBE0000734E3 /* CircleContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleContentCell.m; sourceTree = "<group>"; };
 		962C80BC1EE8FBE0000734E3 /* CircleContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleContentCell.xib; sourceTree = "<group>"; };
@@ -420,6 +431,13 @@
 		96895E661EDE5B49001EF130 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				960025021EF229E400247FD1 /* ShoppingRecCell.h */,
+				960025031EF229E400247FD1 /* ShoppingRecCell.m */,
+				960025051EF22FE200247FD1 /* ShoppingRecCollCell.h */,
+				960025061EF22FE200247FD1 /* ShoppingRecCollCell.m */,
+				960025071EF22FE200247FD1 /* ShoppingRecCollCell.xib */,
+				9600250A1EF2617700247FD1 /* CommodityCollCell.h */,
+				9600250B1EF2617700247FD1 /* CommodityCollCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,6 +618,7 @@
 				96F3FC551EEE88C200EE0BFD /* NavSecondView.xib in Resources */,
 				96895E4F1EDE5A9E001EF130 /* LaunchScreen.storyboard in Resources */,
 				96868A301EF11E5600D02976 /* LimitDetailsCell.xib in Resources */,
+				960025091EF22FE200247FD1 /* ShoppingRecCollCell.xib in Resources */,
 				96E28FC61EEA49A800990B9C /* MineMessageCell.xib in Resources */,
 				96868A351EF138DC00D02976 /* TimeLimitHeadCell.xib in Resources */,
 				96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */,
@@ -672,11 +691,13 @@
 				96F403551EE6972F004355F8 /* HotPostCell.m in Sources */,
 				96FE7CCE1EE25E50002B2835 /* PublicCell.m in Sources */,
 				96868A2F1EF11E5600D02976 /* LimitDetailsCell.m in Sources */,
+				9600250C1EF2617700247FD1 /* CommodityCollCell.m in Sources */,
 				96453D771EEF792200C08BDC /* ScreenView.m in Sources */,
 				9693797C1EDE74E90057AA43 /* Tool.m in Sources */,
 				969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */,
 				96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */,
 				962C80BD1EE8FBE0000734E3 /* CircleContentCell.m in Sources */,
+				960025041EF229E400247FD1 /* ShoppingRecCell.m in Sources */,
 				96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */,
 				96895E7A1EDE682B001EF130 /* CommunityViewController.m in Sources */,
 				96895E471EDE5A9D001EF130 /* ViewController.m in Sources */,
@@ -690,6 +711,7 @@
 				96F3FC441EEE3FE500EE0BFD /* ProductHeadCell.m in Sources */,
 				96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */,
 				96D541651EE54D8E0063B2A0 /* RecommendCell.m in Sources */,
+				960025081EF22FE200247FD1 /* ShoppingRecCollCell.m in Sources */,
 				969CE97C1EE1543A001B07DF /* HotHeadCell.m in Sources */,
 				96895E6C1EDE60DA001EF130 /* RootTabBarController.m in Sources */,
 				96F3FC531EEE88AF00EE0BFD /* NavSecondView.m in Sources */,

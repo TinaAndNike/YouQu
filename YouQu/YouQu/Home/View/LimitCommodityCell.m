@@ -63,7 +63,7 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     LimitCollCell * collCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"limitCollCell" forIndexPath:indexPath];
-    [collCell initControlImageView:[UIImage imageNamed:@"IMG_0673.JPG"] priceLabelText:@"￥99.99" costDownLabel:@"￥99.99"];
+    [collCell initControlImageView:[UIImage imageNamed:@"meinv_02"] priceLabelText:@"￥99.99" costDownLabel:@"￥99.99"];
     return collCell;
 }
 

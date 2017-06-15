@@ -44,7 +44,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="011" translatesAutoresizingMaskIntoConstraints="NO" id="Ky8-rK-cjD">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meinv_02" translatesAutoresizingMaskIntoConstraints="NO" id="Ky8-rK-cjD">
                         <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="286" id="Ftb-PR-1iU"/>
@@ -77,6 +77,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="011" width="606" height="735"/>
+        <image name="meinv_02" width="500" height="500"/>
     </resources>
 </document>
