@@ -7,6 +7,7 @@
 //
 
 #import "CommodityCollCell.h"
+#import "CommodityCell.h"
 
 @interface CommodityCollCell()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,13 +27,14 @@
 
 - (void)buildeTableView {
 
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, 200 - 20) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, 260 - 20) style:UITableViewStylePlain];
     _tableView.bounces = NO;
     _tableView.scrollEnabled = NO;
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.rowHeight = 90;
+    _tableView.rowHeight = 120;
     _tableView.backgroundColor = [UIColor whiteColor];
+    [_tableView registerNib:[UINib nibWithNibName:@"CommodityCell" bundle:nil] forCellReuseIdentifier:@"commodityCell"];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.contentView addSubview:_tableView];
 }
@@ -59,9 +61,8 @@
 #pragma mark - 复用代理
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    CommodityCell * cell = [tableView dequeueReusableCellWithIdentifier:@"commodityCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = @"Tina";
     return cell;
 }
 

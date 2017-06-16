@@ -79,6 +79,23 @@
     return label;
 }
 
+//特殊自适应宽度
++ (CGFloat)specialAdaptionLabelWidthTitleString:(NSString *)string fontSize:(CGFloat)fontSize weigt:(CGFloat)weigt {
+
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 1000, 0)];
+    label.text = string;
+    if (weigt == 0) {
+        
+        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT];
+    } else {
+        
+        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT weight:weigt];
+    }
+
+    [label sizeToFit];
+    return label.frame.size.width;
+}
+
 + (UIButton *)giveMeAButtonWithRect:(CGRect)rect title:(NSString *)title titleColor:(UIColor *)titleColor barkgroudColor:(UIColor *)bgColor barkgroudImage:(UIImage *)image fontOfSize:(CGFloat) fontSize{
 
     UIButton * btn = [[UIButton alloc] initWithFrame:rect];

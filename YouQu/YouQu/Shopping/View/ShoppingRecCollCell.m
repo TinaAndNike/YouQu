@@ -14,5 +14,9 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)shoppingRecBtnClick:(UIButton *)sender {
+    
+    self.shoppingRecBtnBlock();
+}
 
 @end

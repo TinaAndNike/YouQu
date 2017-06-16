@@ -26,4 +26,7 @@
 
 + (void)solveReuseCellWithView:(UIView *)superView;
 
+//特殊自适应宽度
++ (CGFloat)specialAdaptionLabelWidthTitleString:(NSString *)string fontSize:(CGFloat )fontSize weigt:(CGFloat)weigt;
+
 @end

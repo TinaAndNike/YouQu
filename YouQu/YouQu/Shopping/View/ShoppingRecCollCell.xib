@@ -35,32 +35,36 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥99,99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCB-gx-ai0">
-                        <rect key="frame" x="0.0" y="286" width="223" height="13"/>
+                        <rect key="frame" x="0.0" y="286" width="203" height="13"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="13" id="12X-hL-OBU"/>
+                            <constraint firstAttribute="height" constant="13" id="H6c-h8-yZB"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping_Gouwuche" translatesAutoresizingMaskIntoConstraints="NO" id="Z01-g3-VKP">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwT-e7-eGx">
                         <rect key="frame" x="223" y="282" width="17" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="17" id="8yw-nW-pfl"/>
-                            <constraint firstAttribute="height" constant="15" id="O0A-iS-0wM"/>
+                            <constraint firstAttribute="width" constant="17" id="b5N-yF-2Jz"/>
+                            <constraint firstAttribute="height" constant="15" id="nbx-Lo-5Lw"/>
                         </constraints>
-                    </imageView>
+                        <state key="normal" backgroundImage="shopping_Gouwuche"/>
+                        <connections>
+                            <action selector="shoppingRecBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="KhV-SM-w4r"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="UCB-gx-ai0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="46X-jd-MbW"/>
+                <constraint firstItem="UCB-gx-ai0" firstAttribute="top" secondItem="kvM-wZ-VT9" secondAttribute="bottom" constant="7" id="5kh-hV-8m4"/>
                 <constraint firstAttribute="trailing" secondItem="kvM-wZ-VT9" secondAttribute="trailing" id="CpJ-5K-BGa"/>
-                <constraint firstItem="Z01-g3-VKP" firstAttribute="leading" secondItem="UCB-gx-ai0" secondAttribute="trailing" id="FRV-oN-5QU"/>
                 <constraint firstItem="kvM-wZ-VT9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MDx-nI-l8q"/>
-                <constraint firstAttribute="trailing" secondItem="Z01-g3-VKP" secondAttribute="trailing" id="doa-Rn-y5y"/>
-                <constraint firstItem="UCB-gx-ai0" firstAttribute="top" secondItem="kvM-wZ-VT9" secondAttribute="bottom" constant="7" id="fgA-d4-yE1"/>
-                <constraint firstItem="Z01-g3-VKP" firstAttribute="top" secondItem="kvM-wZ-VT9" secondAttribute="bottom" constant="3" id="sgr-PZ-wCD"/>
+                <constraint firstItem="qwT-e7-eGx" firstAttribute="top" secondItem="kvM-wZ-VT9" secondAttribute="bottom" constant="3" id="Xzu-Ws-Rwz"/>
+                <constraint firstItem="qwT-e7-eGx" firstAttribute="leading" secondItem="UCB-gx-ai0" secondAttribute="trailing" constant="20" id="dHN-Bw-7tc"/>
+                <constraint firstAttribute="trailing" secondItem="qwT-e7-eGx" secondAttribute="trailing" id="rUT-ZD-xsH"/>
                 <constraint firstItem="dZb-jo-Rhh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wAF-dM-Pgf"/>
-                <constraint firstItem="UCB-gx-ai0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wmR-ik-xZF"/>
                 <constraint firstItem="dZb-jo-Rhh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="z9y-ry-dU6"/>
                 <constraint firstItem="kvM-wZ-VT9" firstAttribute="top" secondItem="dZb-jo-Rhh" secondAttribute="bottom" constant="7" id="zeW-ro-07B"/>
             </constraints>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		960025041EF229E400247FD1 /* ShoppingRecCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960025031EF229E400247FD1 /* ShoppingRecCell.m */; };
 		960025081EF22FE200247FD1 /* ShoppingRecCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960025061EF22FE200247FD1 /* ShoppingRecCollCell.m */; };
 		960025091EF22FE200247FD1 /* ShoppingRecCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960025071EF22FE200247FD1 /* ShoppingRecCollCell.xib */; };
 		9600250C1EF2617700247FD1 /* CommodityCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600250B1EF2617700247FD1 /* CommodityCollCell.m */; };
@@ -42,6 +41,10 @@
 		96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E851EDE6A5C001EF130 /* TabBarBtn.m */; };
 		96895E891EDE6C2E001EF130 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96895E881EDE6C2E001EF130 /* MineViewController.m */; };
 		9693797C1EDE74E90057AA43 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9693797B1EDE74E90057AA43 /* Tool.m */; };
+		969CCFA41EF3722E00A47DEA /* CommodityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 969CCFA21EF3722E00A47DEA /* CommodityCell.m */; };
+		969CCFA51EF3722E00A47DEA /* CommodityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969CCFA31EF3722E00A47DEA /* CommodityCell.xib */; };
+		969CCFA81EF3876800A47DEA /* ShoppingDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 969CCFA71EF3876800A47DEA /* ShoppingDetailsView.m */; };
+		969CCFAA1EF3877500A47DEA /* ShoppingDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969CCFA91EF3877500A47DEA /* ShoppingDetailsView.xib */; };
 		969CE97C1EE1543A001B07DF /* HotHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 969CE97B1EE1543A001B07DF /* HotHeadCell.m */; };
 		969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 969CE97E1EE163B7001B07DF /* XMLBannerScrollView.m */; };
 		96D5415F1EE50D7A0063B2A0 /* XMLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D5415E1EE50D7A0063B2A0 /* XMLPageControl.m */; };
@@ -77,8 +80,6 @@
 /* Begin PBXFileReference section */
 		24AD4F3DCDE7AC5C87636A04 /* Pods-YouQu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouQu.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouQu/Pods-YouQu.release.xcconfig"; sourceTree = "<group>"; };
 		6061BE328E0227450853C107 /* Pods-YouQu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouQu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouQu/Pods-YouQu.debug.xcconfig"; sourceTree = "<group>"; };
-		960025021EF229E400247FD1 /* ShoppingRecCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingRecCell.h; sourceTree = "<group>"; };
-		960025031EF229E400247FD1 /* ShoppingRecCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingRecCell.m; sourceTree = "<group>"; };
 		960025051EF22FE200247FD1 /* ShoppingRecCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingRecCollCell.h; sourceTree = "<group>"; };
 		960025061EF22FE200247FD1 /* ShoppingRecCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingRecCollCell.m; sourceTree = "<group>"; };
 		960025071EF22FE200247FD1 /* ShoppingRecCollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingRecCollCell.xib; sourceTree = "<group>"; };
@@ -139,6 +140,12 @@
 		96895E881EDE6C2E001EF130 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		9693797A1EDE74E90057AA43 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		9693797B1EDE74E90057AA43 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		969CCFA11EF3722E00A47DEA /* CommodityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommodityCell.h; sourceTree = "<group>"; };
+		969CCFA21EF3722E00A47DEA /* CommodityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommodityCell.m; sourceTree = "<group>"; };
+		969CCFA31EF3722E00A47DEA /* CommodityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommodityCell.xib; sourceTree = "<group>"; };
+		969CCFA61EF3876800A47DEA /* ShoppingDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingDetailsView.h; sourceTree = "<group>"; };
+		969CCFA71EF3876800A47DEA /* ShoppingDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingDetailsView.m; sourceTree = "<group>"; };
+		969CCFA91EF3877500A47DEA /* ShoppingDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingDetailsView.xib; sourceTree = "<group>"; };
 		969CE97A1EE1543A001B07DF /* HotHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotHeadCell.h; sourceTree = "<group>"; };
 		969CE97B1EE1543A001B07DF /* HotHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotHeadCell.m; sourceTree = "<group>"; };
 		969CE97D1EE163B7001B07DF /* XMLBannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLBannerScrollView.h; sourceTree = "<group>"; };
@@ -431,13 +438,17 @@
 		96895E661EDE5B49001EF130 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				960025021EF229E400247FD1 /* ShoppingRecCell.h */,
-				960025031EF229E400247FD1 /* ShoppingRecCell.m */,
+				9600250A1EF2617700247FD1 /* CommodityCollCell.h */,
+				9600250B1EF2617700247FD1 /* CommodityCollCell.m */,
+				969CCFA11EF3722E00A47DEA /* CommodityCell.h */,
+				969CCFA21EF3722E00A47DEA /* CommodityCell.m */,
+				969CCFA31EF3722E00A47DEA /* CommodityCell.xib */,
 				960025051EF22FE200247FD1 /* ShoppingRecCollCell.h */,
 				960025061EF22FE200247FD1 /* ShoppingRecCollCell.m */,
 				960025071EF22FE200247FD1 /* ShoppingRecCollCell.xib */,
-				9600250A1EF2617700247FD1 /* CommodityCollCell.h */,
-				9600250B1EF2617700247FD1 /* CommodityCollCell.m */,
+				969CCFA61EF3876800A47DEA /* ShoppingDetailsView.h */,
+				969CCFA71EF3876800A47DEA /* ShoppingDetailsView.m */,
+				969CCFA91EF3877500A47DEA /* ShoppingDetailsView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -618,8 +629,10 @@
 				96F3FC551EEE88C200EE0BFD /* NavSecondView.xib in Resources */,
 				96895E4F1EDE5A9E001EF130 /* LaunchScreen.storyboard in Resources */,
 				96868A301EF11E5600D02976 /* LimitDetailsCell.xib in Resources */,
+				969CCFAA1EF3877500A47DEA /* ShoppingDetailsView.xib in Resources */,
 				960025091EF22FE200247FD1 /* ShoppingRecCollCell.xib in Resources */,
 				96E28FC61EEA49A800990B9C /* MineMessageCell.xib in Resources */,
+				969CCFA51EF3722E00A47DEA /* CommodityCell.xib in Resources */,
 				96868A351EF138DC00D02976 /* TimeLimitHeadCell.xib in Resources */,
 				96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */,
 				96453D791EEF793800C08BDC /* ScreenView.xib in Resources */,
@@ -697,7 +710,6 @@
 				969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */,
 				96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */,
 				962C80BD1EE8FBE0000734E3 /* CircleContentCell.m in Sources */,
-				960025041EF229E400247FD1 /* ShoppingRecCell.m in Sources */,
 				96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */,
 				96895E7A1EDE682B001EF130 /* CommunityViewController.m in Sources */,
 				96895E471EDE5A9D001EF130 /* ViewController.m in Sources */,
@@ -710,6 +722,7 @@
 				96895E861EDE6A5C001EF130 /* TabBarBtn.m in Sources */,
 				96F3FC441EEE3FE500EE0BFD /* ProductHeadCell.m in Sources */,
 				96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */,
+				969CCFA41EF3722E00A47DEA /* CommodityCell.m in Sources */,
 				96D541651EE54D8E0063B2A0 /* RecommendCell.m in Sources */,
 				960025081EF22FE200247FD1 /* ShoppingRecCollCell.m in Sources */,
 				969CE97C1EE1543A001B07DF /* HotHeadCell.m in Sources */,
@@ -729,6 +742,7 @@
 				96E28FC51EEA49A800990B9C /* MineMessageCell.m in Sources */,
 				96E28FC01EEA43CA00990B9C /* MineheadCell.m in Sources */,
 				96868A271EF0E0FA00D02976 /* TestCollCell.m in Sources */,
+				969CCFA81EF3876800A47DEA /* ShoppingDetailsView.m in Sources */,
 				96868A341EF138DC00D02976 /* TimeLimitHeadCell.m in Sources */,
 				96895E771EDE6810001EF130 /* ShoppingViewController.m in Sources */,
 				96F21FA61EE8F3E800A7A46C /* CircleCell.m in Sources */,

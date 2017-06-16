@@ -9,10 +9,21 @@
 #import "ShoppingViewController.h"
 #import "CommodityCollCell.h"
 #import "ShoppingRecCollCell.h"
+#import "ShoppingDetailsView.h"
 
 @interface ShoppingViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
+@property (nonatomic, strong)UIView * topView;
+
+@property (nonatomic, strong)UILabel * titleLabel;
+
 @property (nonatomic, strong)UICollectionView * collectionView;
+
+@property (nonatomic, strong)UIButton * maskView;
+
+@property (nonatomic, strong)ShoppingDetailsView * shoppingDetailsView;
+
+@property (nonatomic, weak)UIWindow * window;
 
 @end
 
@@ -20,24 +31,97 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = RANDOM_COLOR;
+    self.view.backgroundColor = [UIColor blackColor];
     self.title = @"购物车";
     
+    [self configNavigation];
+    
     [self buildeCollectionView];
+    
+    [self createMaskView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated
 }
+- (UIWindow *)window {
 
+    if (_window == nil) {
+        
+        _window = [UIApplication sharedApplication].keyWindow;
+        _window.backgroundColor = [UIColor blackColor];
+    }
+    return _window;
+}
+
+#pragma mark - 隐藏Nav和页面将要出现和消失
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    self.window.backgroundColor = [UIColor whiteColor];
+}
+
+#pragma mark - 自定制导航栏
+- (void)configNavigation {
+    
+    _topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,SCREEN_WIDTH , 64)];
+    _topView.backgroundColor = HEXCOLOR(0xfed23b);
+    [self.view addSubview:_topView];
+    
+//    UIButton * backBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 30, 9, 15)];
+//    [backBtn setBackgroundImage:[UIImage imageNamed:@"backImage"] forState:UIControlStateNormal];
+//    [backBtn addTarget:self action:@selector(buttonItemBack:) forControlEvents:UIControlEventTouchUpInside];
+//    [_topView addSubview:backBtn];
+    
+    UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, SCREEN_WIDTH, 0.5)];
+    lineView.backgroundColor = [UIColor grayColor];
+    [_topView addSubview:lineView];
+    
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(_topView.center.x - 75, 30, 150, 18)];
+    _titleLabel.font = [UIFont systemFontOfSize:18];
+    _titleLabel.text = @"套套天堂";
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_topView addSubview:_titleLabel];
+}
+
+#pragma mark - 遮盖视图
+- (void)createMaskView {
+
+    _maskView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    _maskView.backgroundColor = [UIColor blackColor];
+    _maskView.alpha = 0;
+    [_maskView addTarget:self action:@selector(maskBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.window addSubview:_maskView];
+    
+    _shoppingDetailsView = [ShoppingDetailsView initShoppingDetailsView];
+    _shoppingDetailsView.frame = CGRectMake(0, SCREEN_HEIGHT + 50 * SPHEIGHT, SCREEN_WIDTH, 467 * SPHEIGHT);
+    [self.window addSubview:_shoppingDetailsView];
+}
+
+//遮盖图点击事件
+- (void)maskBtnClick:(UIButton *)btn {
+
+    [UIView animateWithDuration:0.33 animations:^{
+        
+        self.view.transform = CGAffineTransformMakeScale(1, 1);
+        _maskView.alpha = 0;
+        _shoppingDetailsView.frame = CGRectMake(0, SCREEN_HEIGHT + 50 * SPHEIGHT, SCREEN_WIDTH, 467 * SPHEIGHT);
+    }];
+}
 #pragma mark - 建造collectionView
 - (void)buildeCollectionView {
 
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    //layout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, 10);
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:layout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 103) collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
@@ -82,7 +166,7 @@
     
     if (indexPath.section == 0) {
         
-        return CGSizeMake(SCREEN_WIDTH, 200);
+        return CGSizeMake(SCREEN_WIDTH, 260);
     } else {
     
         return CGSizeMake((SCREEN_WIDTH - ((16 * SPWIDTH) * 3)) / 2, (SCREEN_WIDTH - ((16 * SPWIDTH) * 3)) / 2 + 60);
@@ -136,6 +220,17 @@
         ShoppingRecCollCell * recCollCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"shoppingRecColl" forIndexPath:indexPath];
         recCollCell.imageLayoutH.constant = (SCREEN_WIDTH - ((16 * SPWIDTH) * 3)) / 2;
         recCollCell.imageLayoutW.constant = (SCREEN_WIDTH - ((16 * SPWIDTH) * 3)) / 2;
+        //调用购物车按钮block
+        recCollCell.shoppingRecBtnBlock = ^(){
+        
+            [UIView animateWithDuration:0.33 animations:^{
+                
+                [_shoppingDetailsView buildeScrollViewAndContent];
+                self.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
+                _maskView.alpha = 0.5;
+                _shoppingDetailsView.frame = CGRectMake(0, SCREEN_HEIGHT - 467* SPHEIGHT, SCREEN_WIDTH, 467 * SPHEIGHT);
+            }];
+        };
         return recCollCell;
     }
 }
