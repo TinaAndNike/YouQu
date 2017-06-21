@@ -81,19 +81,22 @@
 
 //特殊自适应宽度
 + (CGFloat)specialAdaptionLabelWidthTitleString:(NSString *)string fontSize:(CGFloat)fontSize weigt:(CGFloat)weigt {
-
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 1000, 0)];
-    label.text = string;
+    
+    UILabel * label = [[UILabel alloc] init];
     if (weigt == 0) {
         
-        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT];
+        label.font = [UIFont systemFontOfSize:fontSize];
     } else {
         
-        label.font = [UIFont systemFontOfSize:fontSize * SPHEIGHT weight:weigt];
+        label.font = [UIFont systemFontOfSize:fontSize weight:weigt];
     }
+    label.text = string;
+    label.numberOfLines = 1;
+    label.lineBreakMode = NSLineBreakByTruncatingTail;
+    CGSize adaptiveSize = CGSizeMake(MAXFLOAT, 320.f);
+    CGSize labelSize = [label sizeThatFits:adaptiveSize];
+    return labelSize.width;
 
-    [label sizeToFit];
-    return label.frame.size.width;
 }
 
 + (UIButton *)giveMeAButtonWithRect:(CGRect)rect title:(NSString *)title titleColor:(UIColor *)titleColor barkgroudColor:(UIColor *)bgColor barkgroudImage:(UIImage *)image fontOfSize:(CGFloat) fontSize{

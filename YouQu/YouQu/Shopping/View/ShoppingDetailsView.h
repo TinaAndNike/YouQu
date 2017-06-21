@@ -14,5 +14,4 @@
 
 + (ShoppingDetailsView *)initShoppingDetailsView;
 
-- (void)buildeScrollViewAndContent;
 @end

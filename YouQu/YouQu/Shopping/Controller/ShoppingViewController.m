@@ -66,7 +66,6 @@
     [super viewWillDisappear:animated];
     
     [self.navigationController setNavigationBarHidden:NO animated:animated];
-    self.window.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - 自定制导航栏
@@ -225,7 +224,6 @@
         
             [UIView animateWithDuration:0.33 animations:^{
                 
-                [_shoppingDetailsView buildeScrollViewAndContent];
                 self.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
                 _maskView.alpha = 0.5;
                 _shoppingDetailsView.frame = CGRectMake(0, SCREEN_HEIGHT - 467* SPHEIGHT, SCREEN_WIDTH, 467 * SPHEIGHT);

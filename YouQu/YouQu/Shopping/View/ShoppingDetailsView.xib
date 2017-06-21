@@ -27,8 +27,8 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="RqE-E2-fDc"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已选:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtI-fb-yJc">
@@ -38,53 +38,60 @@
                         <constraint firstAttribute="height" constant="13" id="h66-Pv-aHj"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黑色均码，36D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eob-Yw-I0w">
                     <rect key="frame" x="155" y="42" width="149" height="13"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7y-YV-2lH">
                     <rect key="frame" x="0.0" y="389" width="319" height="50"/>
-                    <color key="backgroundColor" red="1" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="LuW-l9-m8s"/>
                     </constraints>
                     <state key="normal" title="确定">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mab-G0-JX9">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JCB-mn-QqI">
                     <rect key="frame" x="0.0" y="66" width="319" height="323"/>
-                </scrollView>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7b9-oM-cHH">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="jtI-fb-yJc" firstAttribute="top" secondItem="Jx4-Jg-DnO" secondAttribute="bottom" constant="15" id="1lX-wx-bXf"/>
+                <constraint firstItem="Q7y-YV-2lH" firstAttribute="top" secondItem="JCB-mn-QqI" secondAttribute="bottom" id="CmS-x8-F2H"/>
                 <constraint firstItem="eob-Yw-I0w" firstAttribute="top" secondItem="jtI-fb-yJc" secondAttribute="top" id="G7d-ZV-8ua"/>
-                <constraint firstItem="Q7y-YV-2lH" firstAttribute="top" secondItem="mab-G0-JX9" secondAttribute="bottom" id="HZB-Kd-cn0"/>
                 <constraint firstItem="Q7y-YV-2lH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JOi-EZ-LQG"/>
                 <constraint firstItem="klT-TM-gAR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Jc9-Nl-4Ai"/>
+                <constraint firstAttribute="trailing" secondItem="JCB-mn-QqI" secondAttribute="trailing" id="OQI-fQ-PA3"/>
                 <constraint firstItem="Jx4-Jg-DnO" firstAttribute="leading" secondItem="klT-TM-gAR" secondAttribute="trailing" constant="10" id="PNj-1Q-ERK"/>
-                <constraint firstAttribute="trailing" secondItem="mab-G0-JX9" secondAttribute="trailing" id="SdX-42-xt9"/>
                 <constraint firstItem="eob-Yw-I0w" firstAttribute="leading" secondItem="jtI-fb-yJc" secondAttribute="trailing" id="X0R-Qt-PlM"/>
                 <constraint firstAttribute="trailing" secondItem="Jx4-Jg-DnO" secondAttribute="trailing" constant="50" id="XFh-uo-2jf"/>
                 <constraint firstItem="klT-TM-gAR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-32" id="ZeQ-Qf-QBl"/>
+                <constraint firstItem="JCB-mn-QqI" firstAttribute="top" secondItem="klT-TM-gAR" secondAttribute="bottom" id="Zz4-Jw-R5O"/>
                 <constraint firstItem="Jx4-Jg-DnO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="eTv-mn-qv2"/>
                 <constraint firstItem="eob-Yw-I0w" firstAttribute="bottom" secondItem="jtI-fb-yJc" secondAttribute="bottom" id="fVO-PC-8Od"/>
                 <constraint firstAttribute="trailing" secondItem="eob-Yw-I0w" secondAttribute="trailing" constant="15" id="gmi-47-bLd"/>
-                <constraint firstItem="mab-G0-JX9" firstAttribute="top" secondItem="klT-TM-gAR" secondAttribute="bottom" id="qCC-qP-cIC"/>
+                <constraint firstItem="JCB-mn-QqI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lep-JY-Llq"/>
                 <constraint firstItem="jtI-fb-yJc" firstAttribute="leading" secondItem="klT-TM-gAR" secondAttribute="trailing" constant="10" id="six-hT-15j"/>
                 <constraint firstAttribute="bottom" secondItem="Q7y-YV-2lH" secondAttribute="bottom" id="soK-uF-HcX"/>
                 <constraint firstAttribute="trailing" secondItem="Q7y-YV-2lH" secondAttribute="trailing" id="vdx-GA-XLN"/>
-                <constraint firstItem="mab-G0-JX9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yQv-Fl-z3l"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="scrollView" destination="mab-G0-JX9" id="0uf-NN-ntt"/>
+                <outlet property="collectionView" destination="JCB-mn-QqI" id="C6q-sV-gXN"/>
                 <outlet property="shoppingDetailsImage" destination="klT-TM-gAR" id="8iU-db-gaK"/>
             </connections>
             <point key="canvasLocation" x="21.5" y="-32.5"/>

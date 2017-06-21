@@ -50,6 +50,8 @@
 		96D5415F1EE50D7A0063B2A0 /* XMLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D5415E1EE50D7A0063B2A0 /* XMLPageControl.m */; };
 		96D541651EE54D8E0063B2A0 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D541641EE54D8E0063B2A0 /* RecommendCell.m */; };
 		96D541681EE54FD30063B2A0 /* RecommendCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D541671EE54FD30063B2A0 /* RecommendCollCell.m */; };
+		96D63F7C1EFA805500CA35DC /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D63F7B1EFA805500CA35DC /* LoginController.m */; };
+		96D8428C1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8428B1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m */; };
 		96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE21EDFEF170086D941 /* BannerCell.m */; };
 		96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE51EDFEF440086D941 /* ClassifyCell.m */; };
 		96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DEB1EE025750086D941 /* TimeLimitCell.m */; };
@@ -72,6 +74,7 @@
 		96F3FC551EEE88C200EE0BFD /* NavSecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3FC541EEE88C200EE0BFD /* NavSecondView.xib */; };
 		96F403521EE69109004355F8 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F403511EE69109004355F8 /* TitleCell.m */; };
 		96F403551EE6972F004355F8 /* HotPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F403541EE6972F004355F8 /* HotPostCell.m */; };
+		96FAD8051EF76DFA00FCF480 /* ShoppingDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FAD8041EF76DFA00FCF480 /* ShoppingDetailsCell.m */; };
 		96FE7CCB1EE24D5E002B2835 /* HotCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */; };
 		96FE7CCE1EE25E50002B2835 /* PublicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE7CCD1EE25E50002B2835 /* PublicCell.m */; };
 		B8175BE8DC17CE9FE97C415D /* libPods-YouQu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 980EC4FB8D230211AEE16846 /* libPods-YouQu.a */; };
@@ -156,6 +159,10 @@
 		96D541641EE54D8E0063B2A0 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
 		96D541661EE54FD30063B2A0 /* RecommendCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCollCell.h; sourceTree = "<group>"; };
 		96D541671EE54FD30063B2A0 /* RecommendCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCollCell.m; sourceTree = "<group>"; };
+		96D63F7A1EFA805500CA35DC /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		96D63F7B1EFA805500CA35DC /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		96D8428A1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EqualSpaceFlowLayoutEvolve.h; sourceTree = "<group>"; };
+		96D8428B1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EqualSpaceFlowLayoutEvolve.m; sourceTree = "<group>"; };
 		96DE8DE11EDFEF170086D941 /* BannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
 		96DE8DE21EDFEF170086D941 /* BannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerCell.m; sourceTree = "<group>"; };
 		96DE8DE41EDFEF440086D941 /* ClassifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyCell.h; sourceTree = "<group>"; };
@@ -193,6 +200,8 @@
 		96F403511EE69109004355F8 /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
 		96F403531EE6972F004355F8 /* HotPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPostCell.h; sourceTree = "<group>"; };
 		96F403541EE6972F004355F8 /* HotPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPostCell.m; sourceTree = "<group>"; };
+		96FAD8031EF76DFA00FCF480 /* ShoppingDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingDetailsCell.h; sourceTree = "<group>"; };
+		96FAD8041EF76DFA00FCF480 /* ShoppingDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingDetailsCell.m; sourceTree = "<group>"; };
 		96FE7CC91EE24D5E002B2835 /* HotCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCollCell.h; sourceTree = "<group>"; };
 		96FE7CCA1EE24D5E002B2835 /* HotCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCollCell.m; sourceTree = "<group>"; };
 		96FE7CCC1EE25E50002B2835 /* PublicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicCell.h; sourceTree = "<group>"; };
@@ -366,6 +375,8 @@
 			children = (
 				96895E871EDE6C2E001EF130 /* MineViewController.h */,
 				96895E881EDE6C2E001EF130 /* MineViewController.m */,
+				96D63F7A1EFA805500CA35DC /* LoginController.h */,
+				96D63F7B1EFA805500CA35DC /* LoginController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -449,6 +460,10 @@
 				969CCFA61EF3876800A47DEA /* ShoppingDetailsView.h */,
 				969CCFA71EF3876800A47DEA /* ShoppingDetailsView.m */,
 				969CCFA91EF3877500A47DEA /* ShoppingDetailsView.xib */,
+				96D8428A1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.h */,
+				96D8428B1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m */,
+				96FAD8031EF76DFA00FCF480 /* ShoppingDetailsCell.h */,
+				96FAD8041EF76DFA00FCF480 /* ShoppingDetailsCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -729,14 +744,17 @@
 				96895E6C1EDE60DA001EF130 /* RootTabBarController.m in Sources */,
 				96F3FC531EEE88AF00EE0BFD /* NavSecondView.m in Sources */,
 				96DE8DEC1EE025750086D941 /* TimeLimitCell.m in Sources */,
+				96FAD8051EF76DFA00FCF480 /* ShoppingDetailsCell.m in Sources */,
 				96895E441EDE5A9D001EF130 /* AppDelegate.m in Sources */,
 				96F3FC491EEE461A00EE0BFD /* ProductDetailsCell.m in Sources */,
 				96895E411EDE5A9D001EF130 /* main.m in Sources */,
 				96895E701EDE63C9001EF130 /* RootViewController.m in Sources */,
 				96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */,
 				96E28FCE1EEA89A000990B9C /* ProductDetailsController.m in Sources */,
+				96D8428C1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m in Sources */,
 				96895E741EDE67F5001EF130 /* HomeViewController.m in Sources */,
 				96453D7C1EEFC7E800C08BDC /* RootDetailsController.m in Sources */,
+				96D63F7C1EFA805500CA35DC /* LoginController.m in Sources */,
 				962C80C21EE92C09000734E3 /* RecCircleCell.m in Sources */,
 				96895E831EDE699F001EF130 /* TabBarView.m in Sources */,
 				96E28FC51EEA49A800990B9C /* MineMessageCell.m in Sources */,
