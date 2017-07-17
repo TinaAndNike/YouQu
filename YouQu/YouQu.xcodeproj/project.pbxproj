@@ -47,10 +47,13 @@
 		969CCFAA1EF3877500A47DEA /* ShoppingDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969CCFA91EF3877500A47DEA /* ShoppingDetailsView.xib */; };
 		969CE97C1EE1543A001B07DF /* HotHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 969CE97B1EE1543A001B07DF /* HotHeadCell.m */; };
 		969CE97F1EE163B7001B07DF /* XMLBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 969CE97E1EE163B7001B07DF /* XMLBannerScrollView.m */; };
+		96D132941EFB685F00759D77 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D132921EFB685F00759D77 /* LoginController.m */; };
+		96D132951EFB685F00759D77 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D132931EFB685F00759D77 /* LoginController.xib */; };
+		96D132991EFBA3B700759D77 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D132971EFBA3B700759D77 /* RegisterController.m */; };
+		96D1329A1EFBA3B700759D77 /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D132981EFBA3B700759D77 /* RegisterController.xib */; };
 		96D5415F1EE50D7A0063B2A0 /* XMLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D5415E1EE50D7A0063B2A0 /* XMLPageControl.m */; };
 		96D541651EE54D8E0063B2A0 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D541641EE54D8E0063B2A0 /* RecommendCell.m */; };
 		96D541681EE54FD30063B2A0 /* RecommendCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D541671EE54FD30063B2A0 /* RecommendCollCell.m */; };
-		96D63F7C1EFA805500CA35DC /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D63F7B1EFA805500CA35DC /* LoginController.m */; };
 		96D8428C1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D8428B1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m */; };
 		96DE8DE31EDFEF170086D941 /* BannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE21EDFEF170086D941 /* BannerCell.m */; };
 		96DE8DE61EDFEF440086D941 /* ClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE8DE51EDFEF440086D941 /* ClassifyCell.m */; };
@@ -153,14 +156,18 @@
 		969CE97B1EE1543A001B07DF /* HotHeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotHeadCell.m; sourceTree = "<group>"; };
 		969CE97D1EE163B7001B07DF /* XMLBannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLBannerScrollView.h; sourceTree = "<group>"; };
 		969CE97E1EE163B7001B07DF /* XMLBannerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLBannerScrollView.m; sourceTree = "<group>"; };
+		96D132911EFB685F00759D77 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		96D132921EFB685F00759D77 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		96D132931EFB685F00759D77 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		96D132961EFBA3B700759D77 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
+		96D132971EFBA3B700759D77 /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterController.m; sourceTree = "<group>"; };
+		96D132981EFBA3B700759D77 /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
 		96D5415D1EE50D7A0063B2A0 /* XMLPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLPageControl.h; sourceTree = "<group>"; };
 		96D5415E1EE50D7A0063B2A0 /* XMLPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLPageControl.m; sourceTree = "<group>"; };
 		96D541631EE54D8E0063B2A0 /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
 		96D541641EE54D8E0063B2A0 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
 		96D541661EE54FD30063B2A0 /* RecommendCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCollCell.h; sourceTree = "<group>"; };
 		96D541671EE54FD30063B2A0 /* RecommendCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCollCell.m; sourceTree = "<group>"; };
-		96D63F7A1EFA805500CA35DC /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
-		96D63F7B1EFA805500CA35DC /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		96D8428A1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EqualSpaceFlowLayoutEvolve.h; sourceTree = "<group>"; };
 		96D8428B1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EqualSpaceFlowLayoutEvolve.m; sourceTree = "<group>"; };
 		96DE8DE11EDFEF170086D941 /* BannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerCell.h; sourceTree = "<group>"; };
@@ -375,8 +382,12 @@
 			children = (
 				96895E871EDE6C2E001EF130 /* MineViewController.h */,
 				96895E881EDE6C2E001EF130 /* MineViewController.m */,
-				96D63F7A1EFA805500CA35DC /* LoginController.h */,
-				96D63F7B1EFA805500CA35DC /* LoginController.m */,
+				96D132911EFB685F00759D77 /* LoginController.h */,
+				96D132921EFB685F00759D77 /* LoginController.m */,
+				96D132931EFB685F00759D77 /* LoginController.xib */,
+				96D132961EFBA3B700759D77 /* RegisterController.h */,
+				96D132971EFBA3B700759D77 /* RegisterController.m */,
+				96D132981EFBA3B700759D77 /* RegisterController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -647,11 +658,13 @@
 				969CCFAA1EF3877500A47DEA /* ShoppingDetailsView.xib in Resources */,
 				960025091EF22FE200247FD1 /* ShoppingRecCollCell.xib in Resources */,
 				96E28FC61EEA49A800990B9C /* MineMessageCell.xib in Resources */,
+				96D1329A1EFBA3B700759D77 /* RegisterController.xib in Resources */,
 				969CCFA51EF3722E00A47DEA /* CommodityCell.xib in Resources */,
 				96868A351EF138DC00D02976 /* TimeLimitHeadCell.xib in Resources */,
 				96F21FA71EE8F3E800A7A46C /* CircleCell.xib in Resources */,
 				96453D791EEF793800C08BDC /* ScreenView.xib in Resources */,
 				96895E4C1EDE5A9E001EF130 /* Assets.xcassets in Resources */,
+				96D132951EFB685F00759D77 /* LoginController.xib in Resources */,
 				96895E4A1EDE5A9E001EF130 /* Main.storyboard in Resources */,
 				96868A281EF0E0FA00D02976 /* TestCollCell.xib in Resources */,
 				96F3FC451EEE3FE500EE0BFD /* ProductHeadCell.xib in Resources */,
@@ -752,9 +765,10 @@
 				96ED4ACC1EE10D1B00FE4F64 /* LimitCommodityCell.m in Sources */,
 				96E28FCE1EEA89A000990B9C /* ProductDetailsController.m in Sources */,
 				96D8428C1EF8B33C0087A13F /* EqualSpaceFlowLayoutEvolve.m in Sources */,
+				96D132991EFBA3B700759D77 /* RegisterController.m in Sources */,
 				96895E741EDE67F5001EF130 /* HomeViewController.m in Sources */,
 				96453D7C1EEFC7E800C08BDC /* RootDetailsController.m in Sources */,
-				96D63F7C1EFA805500CA35DC /* LoginController.m in Sources */,
+				96D132941EFB685F00759D77 /* LoginController.m in Sources */,
 				962C80C21EE92C09000734E3 /* RecCircleCell.m in Sources */,
 				96895E831EDE699F001EF130 /* TabBarView.m in Sources */,
 				96E28FC51EEA49A800990B9C /* MineMessageCell.m in Sources */,

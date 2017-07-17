@@ -91,6 +91,8 @@
             imageView.image = [UIImage imageNamed:dict[@"imageName"]];
             [view addSubview:imageView];
             
+            NSLog(@"--%f---%f",imageView.frame.size.width,imageView.frame.size.height);
+            
             UILabel * titleLabel = [Tool giveMeALabelWithRect:CGRectMake(0, CGRectGetMaxY(imageView.frame), width, 12 * SPHEIGHT) text:dict[@"titleStr"] textColor:[UIColor blackColor] backgroudColor:nil fontSize:12 weight:UIFontWeightBold];
             titleLabel.textAlignment = NSTextAlignmentCenter;
             [view addSubview:titleLabel];
@@ -128,8 +130,10 @@
             [_underwearBottomView addSubview:view];
             
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:ADACGRectMake(viewWidth - (90 * SPWIDTH), 0, 90, 125)];
-            imageView.image = [UIImage imageNamed:dict[@"imageName"]];
+            imageView.image = [UIImage imageNamed:@"publicImage"];
             [view addSubview:imageView];
+            
+            NSLog(@"--%f---%f",imageView.frame.size.width,imageView.frame.size.height);
             
             CGFloat labelWitdh = viewWidth - (imageView.bounds.size.width + 15 * SPWIDTH);
             UILabel * titleLabel = [Tool giveMeALabelWithRect:CGRectMake(15 * SPWIDTH, 28 * SPHEIGHT, labelWitdh, 12 * SPHEIGHT) text:dict[@"titleStr"] textColor:[UIColor blackColor] backgroudColor:nil fontSize:12 weight:0];

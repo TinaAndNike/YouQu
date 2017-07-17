@@ -8,6 +8,7 @@
 
 #import "MineheadCell.h"
 
+
 @implementation MineheadCell
 
 - (void)awakeFromNib {
@@ -17,6 +18,15 @@
     _avatarImageView.clipsToBounds = YES;
     _avatarImageView.layer.borderWidth = 2;
     _avatarImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    _nameLabel.hidden = YES;
+    _detailsLabel.hidden = YES;
+}
+//登陆按钮事件
+- (IBAction)loginBtnClick:(UIButton *)sender {
+    
+    NSLog(@"点击我，登陆");
+    self.loginBlick();
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

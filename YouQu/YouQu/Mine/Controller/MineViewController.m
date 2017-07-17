@@ -10,6 +10,7 @@
 #import "MineheadCell.h"
 #import "MineMessageCell.h"
 #import "MineFunctionCell.h"
+#import "LoginController.h"
 
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -140,6 +141,10 @@
         if (indexPath.row == 0) {
            
             MineheadCell * headCell = [tableView dequeueReusableCellWithIdentifier:@"headCell" forIndexPath:indexPath];
+            headCell.loginBlick = ^(){
+            
+                [self.navigationController pushViewController:[LoginController new] animated:YES];
+            };
             return headCell;
             
         } else {

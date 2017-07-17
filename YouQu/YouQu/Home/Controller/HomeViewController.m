@@ -38,6 +38,10 @@
 //bannerArray
 @property (nonatomic, strong)NSMutableArray * hardImageArray;
 
+@property (nonatomic, strong)NSMutableArray * hardImageArray2;
+
+@property (nonatomic, strong)NSMutableArray * hardImageArray3;
+
 //publicArrayAndDict
 @property (nonatomic, strong)NSDictionary * publicDict;
 
@@ -62,14 +66,37 @@
         _hardImageArray = [[NSMutableArray alloc] init];
         for (int i = 1; i < 6; i ++) {
             
-            UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"banner_0%d",i]];
-            NSString * str = [NSString stringWithFormat:@"banner_0%d",i];
-            NSLog(@"----%@",str);
+            UIImage * image = [UIImage imageNamed:@"banner_01"];
             [_hardImageArray addObject:image];
-            NSLog(@"----%ld",_hardImageArray.count);
         }
     }
     return _hardImageArray;
+}
+
+- (NSMutableArray *)hardImageArray2 {
+    
+    if (_hardImageArray2 == nil) {
+        
+        _hardImageArray2 = [[NSMutableArray alloc] init];
+        for (int i = 1; i < 6; i ++) {
+            
+            UIImage * image = [UIImage imageNamed:@"banner_02"];
+            [_hardImageArray2 addObject:image];        }
+    }
+    return _hardImageArray2;
+}
+- (NSMutableArray *)hardImageArray3 {
+    
+    if (_hardImageArray3 == nil) {
+        
+        _hardImageArray3 = [[NSMutableArray alloc] init];
+        for (int i = 1; i < 6; i ++) {
+            
+            UIImage * image = [UIImage imageNamed:@"banner_03"];
+            [_hardImageArray3 addObject:image];
+        }
+    }
+    return _hardImageArray3;
 }
 
 - (NSDictionary *)publicDict {
@@ -106,13 +133,13 @@
     _homeNavImageView.userInteractionEnabled = YES;
     [_transImageView addSubview:_homeNavImageView];
     
-    _leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 26, 28, 28)];
+    _leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 26, 33, 33)];
     [_leftBtn setBackgroundImage:[UIImage imageNamed:@"nav_left_image"] forState:UIControlStateNormal];
     _leftBtn.highlighted = NO;
     [_leftBtn addTarget:self action:@selector(navBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [_transImageView addSubview:_leftBtn];
     
-    _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 38, 26, 28, 28)];
+    _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 38, 26, 33, 33)];
     [_rightBtn setBackgroundImage:[UIImage imageNamed:@"nav_right_image"] forState:UIControlStateNormal];
     _rightBtn.highlighted = NO;
     [_rightBtn addTarget:self action:@selector(navBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -260,7 +287,7 @@
         publicCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicCell initConfigHeadViewWithHeadText:@"套套天堂" detailsText:@"/taotaotaintang"];
-        [publicCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109];
+        [publicCell buildeConfigBannerScrollViewWithImages:self.hardImageArray2 bannerHight:109];
         [publicCell buildeBottomViewWihtDict:self.publicDict];
         return publicCell;
 
@@ -270,7 +297,7 @@
         publicUnderwearCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicUnderwearCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicUnderwearCell initConfigHeadViewWithHeadText:@"情趣内衣" detailsText:@"/qingquneiyi"];
-        [publicUnderwearCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:231];
+        [publicUnderwearCell buildeConfigBannerScrollViewWithImages:self.hardImageArray3 bannerHight:231];
         [publicUnderwearCell buildeUnderwearBottmViewWithDict:self.publicDict];
         return publicUnderwearCell;
         
@@ -284,7 +311,7 @@
         publicNanToyCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicNanToyCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicNanToyCell initConfigHeadViewWithHeadText:@"男用玩具" detailsText:@"/nanyongwanju"];
-        [publicNanToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109];
+        [publicNanToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray2 bannerHight:109];
         [publicNanToyCell buildeBottomViewWihtDict:self.publicDict];
         return publicNanToyCell;
 
@@ -299,7 +326,7 @@
         publicNavToyCell.backgroundColor = HEXCOLOR(0xf2f2f2);
         publicNavToyCell.selectionStyle = UITableViewCellSelectionStyleNone;
         [publicNavToyCell initConfigHeadViewWithHeadText:@"女用玩具" detailsText:@"/nvyongwanju"];
-        [publicNavToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray bannerHight:109];
+        [publicNavToyCell buildeConfigBannerScrollViewWithImages:self.hardImageArray2 bannerHight:109];
         [publicNavToyCell buildeBottomViewWihtDict:self.publicDict];
         return publicNavToyCell;
 

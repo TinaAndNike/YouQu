@@ -31,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = HEXCOLOR(0xf2f2f2);
     self.title = @"购物车";
     
     [self configNavigation];
@@ -75,11 +75,6 @@
     _topView.backgroundColor = HEXCOLOR(0xfed23b);
     [self.view addSubview:_topView];
     
-//    UIButton * backBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 30, 9, 15)];
-//    [backBtn setBackgroundImage:[UIImage imageNamed:@"backImage"] forState:UIControlStateNormal];
-//    [backBtn addTarget:self action:@selector(buttonItemBack:) forControlEvents:UIControlEventTouchUpInside];
-//    [_topView addSubview:backBtn];
-    
     UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 63.5, SCREEN_WIDTH, 0.5)];
     lineView.backgroundColor = [UIColor grayColor];
     [_topView addSubview:lineView];
@@ -121,7 +116,7 @@
     UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 103) collectionViewLayout:layout];
-    _collectionView.backgroundColor = [UIColor whiteColor];
+    _collectionView.backgroundColor = HEXCOLOR(0xf2f2f2);
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     _collectionView.showsVerticalScrollIndicator = NO;

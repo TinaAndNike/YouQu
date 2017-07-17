@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="381" height="171"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="381" height="170"/>
+                <rect key="frame" x="0.0" y="0.0" width="381" height="170.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarImageBG" translatesAutoresizingMaskIntoConstraints="NO" id="geH-9U-pYz" userLabel="bgImageView">
@@ -81,7 +81,16 @@
                             <action selector="collAndFootClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="P0s-vn-FQq"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-FV-0B7">
+                        <rect key="frame" x="104" y="98" width="70" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="登陆"/>
+                        <connections>
+                            <action selector="loginBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JQ8-Yh-fE7"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="oZd-mC-AXY" secondAttribute="trailing" constant="20" id="4PT-7P-Hji"/>
                     <constraint firstAttribute="bottom" secondItem="V8I-ZY-KSy" secondAttribute="bottom" constant="10" id="9vr-vD-bUc"/>

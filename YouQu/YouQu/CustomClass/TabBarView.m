@@ -30,7 +30,7 @@
     
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:HEXCOLOR(0x595959) forState:UIControlStateNormal];
-    [btn setTitleColor:HEXCOLOR(0xfedd81) forState:UIControlStateSelected];
+    //[btn setTitleColor:HEXCOLOR(0xfedd81) forState:UIControlStateSelected];
     
     [self addSubview:btn];
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];

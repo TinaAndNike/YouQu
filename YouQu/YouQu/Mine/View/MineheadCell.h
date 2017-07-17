@@ -15,4 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 @property (weak, nonatomic) IBOutlet UIButton *footBtn;
 
+//跳转登陆页面block
+@property (nonatomic, copy)void(^loginBlick)();
+
 @end
